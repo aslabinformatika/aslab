@@ -102,8 +102,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <div class="form-group">
                                             <label>File:</label>
                                             <input type="file" name="upload" required>
+                                            <button type="submit" class="btn btn-primary">Save</button>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Save</button>
+
                                     </form>
                                         <?php
                                             if($this->session->flashdata('success')){

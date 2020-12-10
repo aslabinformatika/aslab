@@ -111,7 +111,7 @@ $this->load->helper('url');
                                                 </th>
 
                                                 <?php if ($this->session->userdata('akses') == '1') : ?>
-                                                    <th>
+                                                    <th colspan="2">
                                                         <center>Aksi</center>
                                                     </th>
                                                 <?php endif; ?>
@@ -142,10 +142,10 @@ $this->load->helper('url');
 
                                                     <?php if ($this->session->userdata('akses') == '1') : ?>
                                                         <td>
-                                                            <center><a href="<?php echo base_url() . 'divisi/ubah/' . $data->id_itsupport; ?>">Ubah</a></center>
+                                                            <center><a href="<?php echo base_url().'divisi/ubah/'.$data->id_itsupport; ?>">Ubah</a></center>
                                                         </td>
                                                         <td>
-                                                            <center><a href="<?php echo base_url() . 'divisi/hapus/' . $data->id_itsupport; ?>">Hapus</a></center>
+                                                            <center><a href="<?php echo base_url().'divisi/hapus/'.$data->id_itsupport; ?>">Hapus</a></center>
                                                         </td>
                                                     <?php endif; ?>
                                                 </tr>
@@ -172,7 +172,7 @@ $this->load->helper('url');
                                                     <center>Status Barang</center>
                                                 </th>
                                                 <?php if ($this->session->userdata('akses') == '1') : ?>
-                                                    <th>
+                                                    <th colspan="2">
                                                         <center>Aksi</center>
                                                     </th>
                                                 <?php endif; ?>

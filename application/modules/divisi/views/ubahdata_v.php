@@ -122,8 +122,7 @@ $this->load->helper('url');
                                         Jumlah Barang
                                         <span class="text-danger">*</span>
                                     </label>
-                                    <input class="form-control" name="jumlahbarang_itsupport" type="text" value="
-                                                <?php echo set_value($div_itsupport->jumlahbarang_itsupport); ?>">
+                                    <input class="form-control" name="jumlahbarang_itsupport" type="text" value="<?= $div_itsupport->jumlahbarang_itsupport?>">
                                     <?php echo $this->input->post('jumlahbarang_itsupport'); ?>
                                     </input>
                                     <span class="text-danger"><?php echo form_error('jumlahbarang_itsupport'); ?></span>
@@ -179,7 +178,6 @@ $this->load->helper('url');
                                 </div>
 
                                 <?php echo form_close(); ?>
-                                </form>
                             </div>
                         </div>
                     </div>

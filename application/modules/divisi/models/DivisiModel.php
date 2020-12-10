@@ -24,7 +24,7 @@ class DivisiModel extends CI_Model
     // Karena ketika update, id_user tidak harus divalidasi
     // Jadi id_user di validasi hanya ketika menambah data  saja
     if ($mode == "save")
-      $this->form_validation->set_rules('id_itsupport', 'ID', 'required');
+      // $this->form_validation->set_rules('id_itsupport', 'ID', 'required');
 
     $this->form_validation->set_rules('namabarang_itsupport', 'Nama Barang', 'required');
     $this->form_validation->set_rules('jumlahbarang_itsupport', 'Jumlah Barang', 'required');
@@ -55,7 +55,7 @@ class DivisiModel extends CI_Model
   }
 
   // Fungsi untuk melakukan ubah data berdasarkan id_user
-  public function edit($namabarang_itsupport)
+  public function edit($id_itsupport)
   {
     $data = array(
       
@@ -67,14 +67,14 @@ class DivisiModel extends CI_Model
 
     );
 
-    $this->db->where('namabarang_itsupport', $namabarang_itsupport);
+    $this->db->where('id_itsupport', $id_itsupport);
     $this->db->update('div_itsupport', $data); // Untuk mengeksekusi perintah update data
   }
 
   // Fungsi untuk melakukan menghapus data berdasarkan id_user
-  public function delete($namabarang_itsupport)
+  public function delete($id_itsupport)
   {
-    $this->db->where('namabarang_itsupport', $namabarang_itsupport);
+    $this->db->where('id_itsupport', $id_itsupport);
     $this->db->delete('div_itsupport'); // Untuk mengeksekusi perintah delete data
   }
 }

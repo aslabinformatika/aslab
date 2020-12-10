@@ -147,10 +147,10 @@ $this->load->helper('url');
 
                                                     <?php if ($this->session->userdata('akses') == '1') : ?>
                                                         <td>
-                                                            <center><a href="<?php echo base_url() . 'softcomputing/ubah/' . $data->id_softcomputing; ?>">Ubah</a></center>
+                                                            <center><a href="<?php echo base_url().'softcomputing/ubah/'.$data->id_softcomputing; ?>">Ubah</a></center>
                                                         </td>
                                                         <td>
-                                                            <center><a href="<?php echo base_url() . 'softcomputing/hapus/' . $data->id_softcomputing; ?>" onclick="return confirm('Anda yakin mau menghapus item ini ?')" >Hapus</a></center>
+                                                            <center><a href="<?php echo base_url().'softcomputing/hapus/'.$data->id_softcomputing; ?>" onclick="return confirm('Anda yakin mau menghapus item ini ?')" >Hapus</a></center>
 
                                                         </td>
                                                     <?php endif; ?>
@@ -159,7 +159,31 @@ $this->load->helper('url');
                                             }
                                             ?>
                                         </tbody>
-                                      
+                                        <tfoot>
+                                            <tr>
+                                                <th>
+                                                    <center>No</center>
+                                                </th>
+                                                <th>
+                                                    <center>Nama Barang</center>
+                                                </th>
+                                                <th>
+                                                    <center>Jumlah Barang</center>
+                                                </th>
+                                                <th>
+                                                    <center>Satuan Barang</center>
+                                                </th>
+                                                <th><center>Tanggal</center></th>
+                                                <th>
+                                                    <center>Kondisi Barang</center>
+                                                </th>
+                                                <?php if ($this->session->userdata('akses') == '1') : ?>
+                                                    <th colspan="2">
+                                                        <center>Aksi</center>
+                                                    </th>
+                                                <?php endif; ?>
+                                            </tr>
+                                        </tfoot>
                                     </table>
                                 </div>
 

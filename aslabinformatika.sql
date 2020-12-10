@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2020 at 11:21 AM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.8
+-- Generation Time: 10 Des 2020 pada 07.32
+-- Versi Server: 10.1.19-MariaDB
+-- PHP Version: 5.6.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -25,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `agenda_aslab`
+-- Struktur dari tabel `agenda_aslab`
 --
 
 CREATE TABLE `agenda_aslab` (
@@ -37,7 +35,7 @@ CREATE TABLE `agenda_aslab` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `asistenpraktikum`
+-- Struktur dari tabel `asistenpraktikum`
 --
 
 CREATE TABLE `asistenpraktikum` (
@@ -55,12 +53,12 @@ CREATE TABLE `asistenpraktikum` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `asistenpraktikum`
+-- Dumping data untuk tabel `asistenpraktikum`
 --
 
 INSERT INTO `asistenpraktikum` (`id_asisten`, `nama_asisten`, `password_asisten`, `nim_asisten`, `angkatan_asisten`, `alamat_asisten`, `ttl_asisten`, `email_asisten`, `notelp_asisten`, `instagram_asisten`, `level`) VALUES
 ('A111', 'Administrator', '87c8f49122411d5d03d1a60a4da2bbdb', '112333444526', 13, 'Gelam250', '2020-02-04', 'aslab@umsida.ac.id', '0811316151246', 'https://instagram.com/arsyiladhiim', 1),
-('A133', 'M. Arsyil Adhi\'im', 'f068b2b24edb6fc3102c8b000592025f', '161080200285', 13, 'Kahuripan Nirwana Village CA 12 No. 37, SUmput, Sidoarjo', '1997-05-20', 'masadhiim@gmail.com', '082232628265', 'https://www.instagram.com/arsyiladhiim/', 1),
+('A133', 'M. Arsyil Adhi''im', 'f068b2b24edb6fc3102c8b000592025f', '161080200285', 13, 'Kahuripan Nirwana Village CA 12 No. 37, SUmput, Sidoarjo', '1997-05-20', 'masadhiim@gmail.com', '082232628265', 'https://www.instagram.com/arsyiladhiim/', 1),
 ('A150', 'Aditya Wira Utama', '0fc4e03cb10dd99c50aabd72b92dcbc7', '181080200248', 15, 'Kejapanan Gg.Harum Manis RT.01/26, Gempol, Pasuruan', '2000-01-13', 'wiraaditya0@gmail.com', '0881026830554', 'https://www.instagram.com/aditya_wu', 2),
 ('A154', 'Rakhmad Fahmi Putra', '21ebd3caf0365e06be76697bc1c29663', '181080200203', 15, 'Perum Jalagriya i7/1 Sugihwaras Candi', '2000-07-15', 'rafa.putra1507@gmail.com', '089681161105', 'https://instagram.com/akukamudandia', 2),
 ('A155', 'Linda Kushernawati', '85771f3fa1cf800974edadea69ac7cdd', '181080200221', 15, 'Tulangan', '2000-05-01', 'lindakushernawati@gmail.com', '082228669118', 'https://instagram.com/linda_kushernawati', 2),
@@ -87,7 +85,7 @@ INSERT INTO `asistenpraktikum` (`id_asisten`, `nama_asisten`, `password_asisten`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `asisten_foto`
+-- Struktur dari tabel `asisten_foto`
 --
 
 CREATE TABLE `asisten_foto` (
@@ -98,7 +96,7 @@ CREATE TABLE `asisten_foto` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bugreport`
+-- Struktur dari tabel `bugreport`
 --
 
 CREATE TABLE `bugreport` (
@@ -111,45 +109,45 @@ CREATE TABLE `bugreport` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `div_itsupport`
+-- Struktur dari tabel `div_itsupport`
 --
 
 CREATE TABLE `div_itsupport` (
   `id_itsupport` int(11) NOT NULL,
   `namabarang_itsupport` varchar(255) NOT NULL,
-  `jumlahbarang_itsupport` varchar(4) NOT NULL,
+  `jumlahbarang_itsupport` int(8) NOT NULL,
   `satuanbarang_itsupport` varchar(10) NOT NULL,
   `tanggalupdate_itsupport` date NOT NULL,
   `statusbarang_itsupport` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `div_itsupport`
+-- Dumping data untuk tabel `div_itsupport`
 --
 
 INSERT INTO `div_itsupport` (`id_itsupport`, `namabarang_itsupport`, `jumlahbarang_itsupport`, `satuanbarang_itsupport`, `tanggalupdate_itsupport`, `statusbarang_itsupport`) VALUES
-(1, 'Obeng Set', '2', 'Set', '2020-11-08', 'Badan obeng kurang 1'),
-(2, 'Bor', '1', 'Set', '2020-11-09', 'Baik'),
-(3, 'Thermal Paste (Suntik)', '1', 'Biji', '2020-11-09', 'Utuh'),
-(4, 'Isolasi Gabus', '6', 'Biji', '2020-11-09', 'Utuh'),
-(5, 'Palu', '1', 'Buah', '2020-11-09', 'Baik'),
-(6, 'Paku', '1', 'Kotak', '2020-11-09', 'Banyak'),
-(7, 'Tang Biasa', '2', 'Buah', '2020-11-09', 'Baik'),
-(8, 'Tang Krimping', '5', 'Buah', '2020-11-09', 'Baik'),
-(9, 'CCTV', '3', 'Kotak', '2020-11-09', 'Baik'),
-(10, 'Kabel Tis', '1', 'Plastik', '2020-11-09', 'Sudah Dibuka'),
-(11, 'Obeng +', '0', 'Buah', '2020-11-09', 'Tidak Ada'),
-(12, 'Obeng -', '2', 'Buah', '2020-11-09', 'Baik'),
-(13, 'Obeng Besar', '2', 'Buah', '2020-11-09', 'Baik'),
-(14, 'Obeng Tespen', '5', 'Buah', '2020-11-09', 'Baik'),
-(15, 'Cutter', '2', 'Buah', '2020-11-09', 'Baik'),
-(16, 'Gunting', '5', 'Buah', '2020-11-09', 'Baik'),
-(17, 'Tang Biasa', '4', 'Buah', '2020-11-09', 'Baik');
+(1, 'Obeng Set', 2, 'Set', '2020-11-08', 'Badan obeng kurang 1'),
+(2, 'Bor', 1, 'Set', '2020-11-09', 'Baik'),
+(3, 'Thermal Paste (Suntik)', 1, 'Biji', '2020-11-09', 'Utuh'),
+(4, 'Isolasi Gabus', 6, 'Biji', '2020-11-09', 'Utuh'),
+(5, 'Palu', 1, 'Buah', '2020-11-09', 'Baik'),
+(6, 'Paku', 1, 'Kotak', '2020-11-09', 'Banyak'),
+(7, 'Tang Biasa', 2, 'Buah', '2020-11-09', 'Baik'),
+(8, 'Tang Krimping', 5, 'Buah', '2020-11-09', 'Baik'),
+(9, 'CCTV', 3, 'Kotak', '2020-11-09', 'Baik'),
+(10, 'Kabel Tis', 1, 'Plastik', '2020-11-09', 'Sudah Dibuka'),
+(11, 'Obeng +', 0, 'Buah', '2020-11-09', 'Tidak Ada'),
+(12, 'Obeng -', 2, 'Buah', '2020-11-09', 'Baik'),
+(13, 'Obeng Besar', 2, 'Buah', '2020-11-09', 'Baik'),
+(14, 'Obeng Tespen', 5, 'Buah', '2020-11-09', 'Baik'),
+(15, 'Cutter', 2, 'Buah', '2020-11-09', 'Baik'),
+(16, 'Gunting', 5, 'Buah', '2020-11-09', 'Baik'),
+(17, 'Tang Biasa', 4, 'Buah', '2020-11-09', 'Baik');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `div_itsupport_agenda`
+-- Struktur dari tabel `div_itsupport_agenda`
 --
 
 CREATE TABLE `div_itsupport_agenda` (
@@ -162,7 +160,7 @@ CREATE TABLE `div_itsupport_agenda` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `files`
+-- Struktur dari tabel `files`
 --
 
 CREATE TABLE `files` (
@@ -172,7 +170,7 @@ CREATE TABLE `files` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `files`
+-- Dumping data untuk tabel `files`
 --
 
 INSERT INTO `files` (`id_sop`, `filename`, `description`) VALUES
@@ -188,7 +186,7 @@ INSERT INTO `files` (`id_sop`, `filename`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lab_algoprog`
+-- Struktur dari tabel `lab_algoprog`
 --
 
 CREATE TABLE `lab_algoprog` (
@@ -201,7 +199,7 @@ CREATE TABLE `lab_algoprog` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `lab_algoprog`
+-- Dumping data untuk tabel `lab_algoprog`
 --
 
 INSERT INTO `lab_algoprog` (`id_algoprog`, `namabarang_algoprog`, `jumlahbarang_algoprog`, `satuanbarang_algoprog`, `tanggalupdate_algoprog`, `kondisi_algoprog`) VALUES
@@ -212,7 +210,7 @@ INSERT INTO `lab_algoprog` (`id_algoprog`, `namabarang_algoprog`, `jumlahbarang_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lab_jarkom`
+-- Struktur dari tabel `lab_jarkom`
 --
 
 CREATE TABLE `lab_jarkom` (
@@ -225,7 +223,7 @@ CREATE TABLE `lab_jarkom` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `lab_jarkom`
+-- Dumping data untuk tabel `lab_jarkom`
 --
 
 INSERT INTO `lab_jarkom` (`id_jarkom`, `namabarang_jarkom`, `jumlahbarang_jarkom`, `satuanbarang_jarkom`, `tanggalupdate_jarkom`, `kondisi_jarkom`) VALUES
@@ -234,7 +232,7 @@ INSERT INTO `lab_jarkom` (`id_jarkom`, `namabarang_jarkom`, `jumlahbarang_jarkom
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lab_rpl`
+-- Struktur dari tabel `lab_rpl`
 --
 
 CREATE TABLE `lab_rpl` (
@@ -249,7 +247,7 @@ CREATE TABLE `lab_rpl` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lab_server`
+-- Struktur dari tabel `lab_server`
 --
 
 CREATE TABLE `lab_server` (
@@ -264,7 +262,7 @@ CREATE TABLE `lab_server` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lab_sistemoperasi`
+-- Struktur dari tabel `lab_sistemoperasi`
 --
 
 CREATE TABLE `lab_sistemoperasi` (
@@ -277,7 +275,7 @@ CREATE TABLE `lab_sistemoperasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `lab_sistemoperasi`
+-- Dumping data untuk tabel `lab_sistemoperasi`
 --
 
 INSERT INTO `lab_sistemoperasi` (`id_sistemoperasi`, `namabarang_sistemoperasi`, `jumlahbarang_sistemoperasi`, `satuanbarang_sistemoperasi`, `tanggalupdate_sistemoperasi`, `kondisi_sistemoperasi`) VALUES
@@ -291,7 +289,7 @@ INSERT INTO `lab_sistemoperasi` (`id_sistemoperasi`, `namabarang_sistemoperasi`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lab_softcomputing`
+-- Struktur dari tabel `lab_softcomputing`
 --
 
 CREATE TABLE `lab_softcomputing` (
@@ -304,7 +302,7 @@ CREATE TABLE `lab_softcomputing` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `lab_softcomputing`
+-- Dumping data untuk tabel `lab_softcomputing`
 --
 
 INSERT INTO `lab_softcomputing` (`id_softcomputing`, `namabarang_softcomputing`, `jumlahbarang_softcomputing`, `satuanbarang_softcomputing`, `tanggalupdate_softcomputing`, `kondisi_softcomputing`) VALUES
@@ -312,12 +310,13 @@ INSERT INTO `lab_softcomputing` (`id_softcomputing`, `namabarang_softcomputing`,
 (2, 'Monitor', '32', 'Unit', '2020-11-30', 'Normal'),
 (3, 'Keyboard', '32', 'Unit', '2020-11-30', 'Normal'),
 (4, 'Mouse', '32', 'Unit', '2020-11-30', 'Normal'),
-(5, 'AC', '3', 'Unit', '2020-11-30', 'Normal');
+(5, 'AC', '3', 'Unit', '2020-11-30', 'Normal'),
+(7, '                                                kana', '200', 'nada', '2021-03-17', 'rusa');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lpj_kegiatan`
+-- Struktur dari tabel `lpj_kegiatan`
 --
 
 CREATE TABLE `lpj_kegiatan` (
@@ -331,17 +330,17 @@ CREATE TABLE `lpj_kegiatan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `lpj_kegiatan`
+-- Dumping data untuk tabel `lpj_kegiatan`
 --
 
 INSERT INTO `lpj_kegiatan` (`id_lpj`, `namakegiatan_lpj`, `jenis_lpj`, `penanggungjawab_lpj`, `tanggalmulai_kegiatan`, `tanggalselesai_kegiatan`, `filename_lpj`) VALUES
-(6, 'Dari Sini Inovasi Bersemi', 'Diklat', 'M. Arsyil Adhi\'im', '2017-11-30', '2017-12-03', 'LPJ-diklat_Angkatan_14.pdf'),
-(7, 'LAPORAN HASIL KEGIATAN DIKLAT 2017', 'Diklat', 'M. Arsyil Adhi\'im', '2017-11-30', '2017-12-03', 'LAPORAN_HASIL_KEGIATAN.pdf');
+(6, 'Dari Sini Inovasi Bersemi', 'Diklat', 'M. Arsyil Adhi''im', '2017-11-30', '2017-12-03', 'LPJ-diklat_Angkatan_14.pdf'),
+(7, 'LAPORAN HASIL KEGIATAN DIKLAT 2017', 'Diklat', 'M. Arsyil Adhi''im', '2017-11-30', '2017-12-03', 'LAPORAN_HASIL_KEGIATAN.pdf');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mahasiswa`
+-- Struktur dari tabel `mahasiswa`
 --
 
 CREATE TABLE `mahasiswa` (
@@ -352,7 +351,7 @@ CREATE TABLE `mahasiswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `mahasiswa`
+-- Dumping data untuk tabel `mahasiswa`
 --
 
 INSERT INTO `mahasiswa` (`nim_mahasiswa`, `nama_mahasiswa`, `password_mahasiswa`, `semester_mahasiswa`) VALUES
@@ -361,7 +360,7 @@ INSERT INTO `mahasiswa` (`nim_mahasiswa`, `nama_mahasiswa`, `password_mahasiswa`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `peminjaman_buku`
+-- Struktur dari tabel `peminjaman_buku`
 --
 
 CREATE TABLE `peminjaman_buku` (
@@ -375,7 +374,7 @@ CREATE TABLE `peminjaman_buku` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prak01_algoprog`
+-- Struktur dari tabel `prak01_algoprog`
 --
 
 CREATE TABLE `prak01_algoprog` (
@@ -389,7 +388,7 @@ CREATE TABLE `prak01_algoprog` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `prak01_algoprog`
+-- Dumping data untuk tabel `prak01_algoprog`
 --
 
 INSERT INTO `prak01_algoprog` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum`, `link_rangkuman`, `tanggal_pengumpulan`, `nama_asisten`, `penerima_laporan`) VALUES
@@ -416,7 +415,7 @@ INSERT INTO `prak01_algoprog` (`nim_praktikum`, `nama_praktikan`, `kelompok_prak
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prak02_algostruk`
+-- Struktur dari tabel `prak02_algostruk`
 --
 
 CREATE TABLE `prak02_algostruk` (
@@ -430,17 +429,17 @@ CREATE TABLE `prak02_algostruk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `prak02_algostruk`
+-- Dumping data untuk tabel `prak02_algostruk`
 --
 
 INSERT INTO `prak02_algostruk` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum`, `link_rangkuman`, `tanggal_pengumpulan`, `nama_asisten`, `penerima_laporan`) VALUES
 ('131080200061', 'Angga F.', '8', 'https://ict-umsida.blogspot.com/', '2017-05-29 17:00:00', 'M. Amirulloh', 'Alfan Indra Kusuma'),
 ('131080200317', 'Muhammad Al Farabi', '8', 'https://ict-umsida.blogspot.com/', '2017-05-30 17:00:00', 'M. Amirulloh', 'Alfan Indra Kusuma'),
-('141080200201', 'Wahyu Risky A', '9', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Vini Rahmawati'),
+('141080200201', 'Wahyu Risky A', '9', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A133 M. Arsyil Adhi''im', 'Vini Rahmawati'),
 ('151080200084', 'M. Fatkhur Rozi ', '05', 'https://ict-umsida.blogspot.com/', '2017-05-23 17:00:00', 'Ailul Chowiyah', 'Ratih Puspitasari'),
-('151080200201', 'Dona A', '9', 'https://ict-umsida.blogspot.com/', '2018-04-08 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Vini Rahmawati'),
+('151080200201', 'Dona A', '9', 'https://ict-umsida.blogspot.com/', '2018-04-08 17:00:00', 'A133 M. Arsyil Adhi''im', 'Vini Rahmawati'),
 ('151080200288', 'Muhammad ilham Ramadhan', '3', 'https://ict-umsida.blogspot.com', '2019-05-27 17:00:00', 'A147 M. Said Agil S.', 'Rofinus Aryanto'),
-('151080200313', 'Bintang Prayogo', '9', 'https://ict-umsida.blogspot.com/', '2018-04-15 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Vini Rahmawati'),
+('151080200313', 'Bintang Prayogo', '9', 'https://ict-umsida.blogspot.com/', '2018-04-15 17:00:00', 'A133 M. Arsyil Adhi''im', 'Vini Rahmawati'),
 ('161080200001', 'Yunia Mariana', '10', 'https://ict-umsida.blogspot.com/', '2017-05-23 17:00:00', 'Fatur Amirul M.', 'Ratih Puspitasari'),
 ('161080200002', 'M. Adenan K', '01', 'https://ict-umsida.blogspot.com/', '2017-05-23 17:00:00', 'Rhamadina Fitrah Umami', 'Ratih Puspitasari'),
 ('161080200003', 'Agus Wahyu A', '10', 'https://ict-umsida.blogspot.com/', '2017-05-23 17:00:00', 'Fatur Amirul M.', 'Ratih Puspitasari'),
@@ -543,7 +542,7 @@ INSERT INTO `prak02_algostruk` (`nim_praktikum`, `nama_praktikan`, `kelompok_pra
 ('161080200181', 'Dody Dwi Putra', '16', 'https://ict-umsida.blogspot.com/', '2017-05-02 17:00:00', 'Ailul Chowiyah', 'Alfan Indra Kusuma'),
 ('161080200183', 'Muhammad Rijal B', '05', 'https://ict-umsida.blogspot.com', '2017-05-28 17:00:00', 'Ailul Chowiyah', 'Ratih Puspitasari'),
 ('161080200184', 'Ainun Rachman H', '05', 'https://ict-umsida.blogspot.com/', '2017-05-23 17:00:00', 'Ailul Chowiyah', 'Ratih Puspitasari'),
-('161080200187', 'Muhammad Asy\'An', '5', 'https://ict-umsida.blogspot.com/', '2017-05-30 17:00:00', 'Ailul Chowiyah', 'Alfan Indra Kusuma'),
+('161080200187', 'Muhammad Asy''An', '5', 'https://ict-umsida.blogspot.com/', '2017-05-30 17:00:00', 'Ailul Chowiyah', 'Alfan Indra Kusuma'),
 ('161080200189', 'Zulfian Syahril S', '05', 'https://ict-umsida.blogspot.com/', '2017-05-23 17:00:00', 'Ailul Chowiyah', 'Ratih Puspitasari'),
 ('161080200191', 'Rochmad Surya N.', '16', 'https://ict-umsida.blogspot.com/', '2017-05-02 17:00:00', 'Ailul Chowiyah', 'Alfan Indra Kusuma'),
 ('161080200195', 'Yoga Pratama Putra', '16', 'https://ict-umsida.blogspot.com/', '2017-06-01 17:00:00', 'Ailul Chowiyah', 'Alfan Indra Kusuma'),
@@ -637,7 +636,7 @@ INSERT INTO `prak02_algostruk` (`nim_praktikum`, `nama_praktikan`, `kelompok_pra
 ('171080200071', 'Agung Wijaya', '13', 'https://ict-umsida.blogspot.com/', '2018-04-12 17:00:00', 'A140 Arofatus Salis', 'Alfan Indra Kusuma'),
 ('171080200073', 'Fitrianingsih', '6', 'https://ict-umsida.blogspot.com/', '2018-04-05 17:00:00', 'A138 Dwi Lestari', 'Alfan Indra Kusuma'),
 ('171080200074', 'Rizky Bayu Wardana', '13', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A140 Arofatus Salis', 'Alfan Indra Kusuma'),
-('171080200079', 'Muhammad Rizal Ma\'ruf', '13', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A140 Arofatus Salis', 'Alfan Indra Kusuma'),
+('171080200079', 'Muhammad Rizal Ma''ruf', '13', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A140 Arofatus Salis', 'Alfan Indra Kusuma'),
 ('171080200080', 'Amril Anash R.', '13', 'https://ict-umsida.blogspot.com/', '2018-04-12 17:00:00', 'A140 Arofatus Salis', 'Alfan Indra Kusuma'),
 ('171080200084', 'Moch. Anang Fathony', '13', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A140 Arofatus Salis', 'Alfan Indra Kusuma'),
 ('171080200086', 'M. Fakhruddin A. R.', '13', 'https://ict-umsida.blogspot.com/', '2018-04-12 17:00:00', 'A140 Arofatus Salis', 'Alfan Indra Kusuma'),
@@ -649,7 +648,7 @@ INSERT INTO `prak02_algostruk` (`nim_praktikum`, `nama_praktikan`, `kelompok_pra
 ('171080200098', 'Hasya Salsabilah', '13', 'https://ict-umsida.blogspot.com/', '2018-04-12 17:00:00', 'A140 Arofatus Salis', 'Alfan Indra Kusuma'),
 ('171080200103', 'Danu Wahyudi', '13', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A140 Arofatus Salis', 'Alfan Indra Kusuma'),
 ('171080200104', 'Andri Setiawan', '13', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A140 Arofatus Salis', 'Alfan Indra Kusuma'),
-('171080200106', 'Moch. Musaddat Ansa\'', '13', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A140 Arofatus Salis', 'Alfan Indra Kusuma'),
+('171080200106', 'Moch. Musaddat Ansa''', '13', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A140 Arofatus Salis', 'Alfan Indra Kusuma'),
 ('171080200110', 'Naufal Faiz Akbar', '13', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A140 Arofatus Salis', 'Alfan Indra Kusuma'),
 ('171080200116', 'Nur Muhammad R.', '14', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A134 Alfian Ari Putra', 'Alfan Indra Kusuma'),
 ('171080200117', 'Rijaluddin Abdur R.', '14', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A134 Alfian Ari Putra', 'Alfan Indra Kusuma'),
@@ -667,7 +666,7 @@ INSERT INTO `prak02_algostruk` (`nim_praktikum`, `nama_praktikan`, `kelompok_pra
 ('171080200131', 'David Eka R.', '5', 'https://ict-umsida.blogspot.com/', '2018-04-05 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Alfan Indra Kusuma'),
 ('171080200132', 'Muhammad Rudy Rifki', '14', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A134 Alfian Ari Putra', 'Alfan Indra Kusuma'),
 ('171080200133', 'Aga Dandi P.', '5', 'https://ict-umsida.blogspot.com/', '2018-04-06 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Alfan Indra Kusuma'),
-('171080200134', 'Risky Rachmatulilah', '9', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Vini Rahmawati'),
+('171080200134', 'Risky Rachmatulilah', '9', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A133 M. Arsyil Adhi''im', 'Vini Rahmawati'),
 ('171080200135', 'Achmad Syaichul Hadi', '5', 'https://ict-umsida.blogspot.com/', '2018-04-05 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Alfan Indra Kusuma'),
 ('171080200136', 'Dwi Rojab', '14', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A134 Alfian Ari Putra', 'Alfan Indra Kusuma'),
 ('171080200137', 'Mohammad Muzy A.', '5', 'https://ict-umsida.blogspot.com/', '2018-04-06 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Alfan Indra Kusuma'),
@@ -713,7 +712,7 @@ INSERT INTO `prak02_algostruk` (`nim_praktikum`, `nama_praktikan`, `kelompok_pra
 ('171080200191', 'Satria Hidayatullah', '8', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A136 Dewangga Eka Putra', 'Rahmi Aulia Barlian'),
 ('171080200192', 'Anisa Yuli E.P', '8', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A136 Dewangga Eka Putra', 'Rahmi Aulia Barlian'),
 ('171080200193', 'Mohammad Tantowi Yahya', '8', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A136 Dewangga Eka Putra', 'Rahmi Aulia Barlian'),
-('171080200194', 'Indah Mas\'ula', '8', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A136 Dewangga Eka Putra', 'Rahmi Aulia Barlian'),
+('171080200194', 'Indah Mas''ula', '8', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A136 Dewangga Eka Putra', 'Rahmi Aulia Barlian'),
 ('171080200195', 'Oktavian Eka H.', '8', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A136 Dewangga Eka Putra', 'Rahmi Aulia Barlian'),
 ('171080200197', 'Bagus Indra S. D.', '16', 'https://ict-umsida.blogspot.com/', '2018-04-17 17:00:00', 'A138 Dwi Lestari', 'Alfan Indra Kusuma'),
 ('171080200202', 'Aditya Maulana Ibrahim', '16', 'https://ict-umsida.blogspot.com/', '2018-04-20 17:00:00', 'A138 Dwi Lestari', 'Alfan Indra Kusuma'),
@@ -724,10 +723,10 @@ INSERT INTO `prak02_algostruk` (`nim_praktikum`, `nama_praktikan`, `kelompok_pra
 ('171080200212', 'M. Dary Bridantara', '8', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A136 Dewangga Eka Putra', 'Rahmi Aulia Barlian'),
 ('171080200213', 'Fitha Ayaning Tyas ', '15', 'https://ict-umsida.blogspot.com/', '2018-04-19 17:00:00', 'A137 Fitria Lailatul Kodriyah', 'Alfan Indra Kusuma'),
 ('171080200216', 'Ahmad Richi Fabror F.', '16', 'https://ict-umsida.blogspot.com/', '2018-04-15 17:00:00', 'A138 Dwi Lestari', 'Alfan Indra Kusuma'),
-('171080200220', 'Resita Adelia F', '9', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Vini Rahmawati'),
+('171080200220', 'Resita Adelia F', '9', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A133 M. Arsyil Adhi''im', 'Vini Rahmawati'),
 ('171080200221', 'Denny H.', '16', 'https://ict-umsida.blogspot.com/', '2018-04-18 17:00:00', 'A138 Dwi Lestari', 'Alfan Indra Kusuma'),
-('171080200222', 'Ahmad Muflih', '9', 'https://ict-umsida.blogspot.com/', '2018-04-12 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Vini Rahmawati'),
-('171080200224', 'Muhammad Fadil Santoso', '9', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Vini Rahmawati'),
+('171080200222', 'Ahmad Muflih', '9', 'https://ict-umsida.blogspot.com/', '2018-04-12 17:00:00', 'A133 M. Arsyil Adhi''im', 'Vini Rahmawati'),
+('171080200224', 'Muhammad Fadil Santoso', '9', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A133 M. Arsyil Adhi''im', 'Vini Rahmawati'),
 ('171080200225', 'Mahardika Rafi M.', '16', 'https://ict-umsida.blogspot.com/', '2018-04-16 17:00:00', 'A138 Dwi Lestari', 'Alfan Indra Kusuma'),
 ('171080200226', 'Tri Wahyuni', '14', 'https://ict-umsida.blogspot.com/', '2018-08-15 17:00:00', 'A134 Alfian Ari Putra', 'Alfan Indra Kusuma'),
 ('171080200227', 'Ahkamil Hakim Mukmin', '6', 'https://ict-umsida.blogspot.com/', '2018-04-06 17:00:00', 'A138 Dwi Lestari', 'Alfan Indra Kusuma'),
@@ -736,9 +735,9 @@ INSERT INTO `prak02_algostruk` (`nim_praktikum`, `nama_praktikan`, `kelompok_pra
 ('171080200237', 'Muhammad Choir Ridho', '17', 'https://ict-umsida.blogspot.com/', '2018-04-16 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Alfan Indra Kusuma'),
 ('171080200239', 'Misbachul Munir', '17', 'https://ict-umsida.blogspot.com/', '2018-05-05 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Alfan Indra Kusuma'),
 ('171080200240', 'Moch. Iwan Setiawan', '17', 'https://ict-umsida.blogspot.com/', '2018-09-17 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Alfan Indra Kusuma'),
-('171080200242', 'M Chardynal P', '9', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Vini Rahmawati'),
+('171080200242', 'M Chardynal P', '9', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A133 M. Arsyil Adhi''im', 'Vini Rahmawati'),
 ('171080200244', 'Buyung Satrio N.', '17', 'https://ict-umsida.blogspot.com/', '2018-04-15 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Alfan Indra Kusuma'),
-('171080200247', 'Cholifatur Rohman D', '9', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Vini Rahmawati'),
+('171080200247', 'Cholifatur Rohman D', '9', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A133 M. Arsyil Adhi''im', 'Vini Rahmawati'),
 ('171080200248', 'Yunita Setyaningsih', '12', 'https://ict-umsida.blogspot.com/', '2018-04-12 17:00:00', 'A140 Arofatus Salis', 'Alfan Indra Kusuma'),
 ('171080200250', 'Eric Dwi Setia Putra', '17', 'https://ict-umsida.blogspot.com/', '2018-04-19 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Alfan Indra Kusuma'),
 ('171080200251', 'M. Hafidz Yulianto', '6', 'https://ict-umsida.blogspot.com/', '2018-04-09 17:00:00', 'A138 Dwi Lestari', 'Alfan Indra Kusuma'),
@@ -746,11 +745,11 @@ INSERT INTO `prak02_algostruk` (`nim_praktikum`, `nama_praktikan`, `kelompok_pra
 ('171080200253', 'Shoni Izzam M.', '12', 'https://ict-umsida.blogspot.com/', '2018-04-12 17:00:00', 'A140 Arofatus Salis', 'Alfan Indra Kusuma'),
 ('171080200255', 'Daniel Alawiy', '12', 'https://ict-umsida.blogspot.com/', '2018-04-12 17:00:00', 'A140 Arofatus Salis', 'Alfan Indra Kusuma'),
 ('171080200256', 'M. Ardiansyah', '13', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A140 Arofatus Salis', 'Alfan Indra Kusuma'),
-('171080200257', 'Rizal Nur Ramadhan', '9', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Vini Rahmawati'),
+('171080200257', 'Rizal Nur Ramadhan', '9', 'https://ict-umsida.blogspot.com/', '2018-04-10 17:00:00', 'A133 M. Arsyil Adhi''im', 'Vini Rahmawati'),
 ('171080200259', 'Ifaldi Danang S.', '6', 'https://ict-umsida.blogspot.com/', '2018-04-06 17:00:00', 'A138 Dwi Lestari', 'Alfan Indra Kusuma'),
 ('171080200261', 'Nor Wahyu Widianto', '6', 'https://ict-umsida.blogspot.com/', '2018-04-06 17:00:00', 'A138 Dwi Lestari', 'Alfan Indra Kusuma'),
-('171080200263', 'Habby Nur Cahyo', '9', 'https://ict-umsida.blogspot.com/', '2018-04-05 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Vini Rahmawati'),
-('171080200266', 'Frenky Adi I', '9', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Vini Rahmawati'),
+('171080200263', 'Habby Nur Cahyo', '9', 'https://ict-umsida.blogspot.com/', '2018-04-05 17:00:00', 'A133 M. Arsyil Adhi''im', 'Vini Rahmawati'),
+('171080200266', 'Frenky Adi I', '9', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A133 M. Arsyil Adhi''im', 'Vini Rahmawati'),
 ('171080200272', 'Lukman Z.', '16', 'https://ict-umsida.blogspot.com/', '2018-04-18 17:00:00', 'A138 Dwi Lestari', 'Alfan Indra Kusuma'),
 ('171080200277', 'Andri Aprianto', '11', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A139 Indah Fauzia', 'Alfan Indra Kusuma'),
 ('171080200278', 'Tomin', '11', 'https://ict-umsida.blogspot.com/', '2018-04-11 17:00:00', 'A139 Indah Fauzia', 'Alfan Indra Kusuma'),
@@ -845,7 +844,7 @@ INSERT INTO `prak02_algostruk` (`nim_praktikum`, `nama_praktikan`, `kelompok_pra
 ('181080200246', 'Salsabila Mareta P', '11', 'https://ict-umsida.blogspot.com/', '2019-06-17 17:00:00', 'A139 Indah Fauzia', 'Ratih Puspitasari'),
 ('181080200249', 'Jihaan Anisa Mukti', '11', 'https://ict-umsida.blogspot.com/', '2019-06-16 17:00:00', 'A139 Indah Fauzia', 'Ratih Puspitasari'),
 ('181080200250', 'Moch. Sofi Mubarok', '11', 'https://ict-umsida.blogspot.com/', '2019-06-16 17:00:00', 'A139 Indah Fauzia', 'Ratih Puspitasari'),
-('181080200251', 'M. Syauqil\'Ula Ar R', '11', 'https://ict-umsida.blogspot.com/', '2019-05-26 17:00:00', 'A139 Indah Fauzia', 'Ratih Puspitasari'),
+('181080200251', 'M. Syauqil''Ula Ar R', '11', 'https://ict-umsida.blogspot.com/', '2019-05-26 17:00:00', 'A139 Indah Fauzia', 'Ratih Puspitasari'),
 ('181080200254', 'M Fahmi Rizal', '18', 'https://ict-umsida.blogspot.com/', '2019-12-05 17:00:00', 'A147 M. Said Agil S.', 'Rofinus Aryanto'),
 ('181080200255', 'M Chayiya Zumma', '18', 'https://ict-umsida.blogspot.com/', '2019-12-05 17:00:00', 'A147 M. Said Agil S.', 'Rofinus Aryanto'),
 ('181080200258', 'Rahmi Aulia Barlian ', '11', 'https://ict-umsida.blogspot.com/', '2019-06-16 17:00:00', 'A139 Indah Fauzia', 'Ratih Puspitasari'),
@@ -872,7 +871,7 @@ INSERT INTO `prak02_algostruk` (`nim_praktikum`, `nama_praktikan`, `kelompok_pra
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prak03_basisdata`
+-- Struktur dari tabel `prak03_basisdata`
 --
 
 CREATE TABLE `prak03_basisdata` (
@@ -886,7 +885,7 @@ CREATE TABLE `prak03_basisdata` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `prak03_basisdata`
+-- Dumping data untuk tabel `prak03_basisdata`
 --
 
 INSERT INTO `prak03_basisdata` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum`, `link_rangkuman`, `tanggal_pengumpulan`, `nama_asisten`, `penerima_laporan`) VALUES
@@ -900,7 +899,7 @@ INSERT INTO `prak03_basisdata` (`nim_praktikum`, `nama_praktikan`, `kelompok_pra
 ('151080200032', 'Zhulvi Qor A.', '11', 'https://ict-umsida.blogspot.com', '2019-05-24 17:00:00', 'A140 Arofatus Salis', 'MUHAMMAD SAJI FAUSIL'),
 ('151080200078', 'Aris Distiawan ', '6', 'https://ict-umsida.blogspot.com', '2019-05-19 17:00:00', 'A139 Indah Fauzia', 'MUHAMMAD SAJI FAUSIL'),
 ('151080200151', 'Misbahuddin', '06', 'https://ict-umsida.blogspot.com', '2019-05-21 17:00:00', 'A139 Indah Fauzia', 'Maulana Iqbhal Prayogha Slamet'),
-('151080200203', 'MOCH MA\'RUF F.', '18', 'https://ict-umsida.blogspot.com', '2018-04-18 17:00:00', 'M. Amirulloh', 'MUHAMMAD SAJI FAUSIL'),
+('151080200203', 'MOCH MA''RUF F.', '18', 'https://ict-umsida.blogspot.com', '2018-04-18 17:00:00', 'M. Amirulloh', 'MUHAMMAD SAJI FAUSIL'),
 ('151080200219', 'Reza Mandala', '6', 'https://ict-umsida.blogspot.com', '2018-04-04 17:00:00', 'M. Amirulloh', 'Rofinus Aryanto'),
 ('151080200235', 'Muhamad Alfin  F.', '06', 'https://ict-umsida.blogspot.com', '2019-05-19 17:00:00', 'A139 Indah Fauzia', 'Maulana Iqbhal Prayogha Slamet'),
 ('151080200249', 'Dimas Andi R', '9', 'https://ict-umsida.blogspot.com', '2018-04-05 17:00:00', 'Fatur Amirul M.', 'MUHAMMAD SAJI FAUSIL'),
@@ -966,7 +965,7 @@ INSERT INTO `prak03_basisdata` (`nim_praktikum`, `nama_praktikan`, `kelompok_pra
 ('161080200180', 'PRATAMA BUDI BAKTI', '16', 'https://ict-umsida.blogspot.com', '2018-04-28 17:00:00', 'Rhamadina Fitrah Umami', 'MUHAMMAD SAJI FAUSIL'),
 ('161080200184', 'AINUN RACHMAN H.', '05', 'https://ict-umsida.blogspot.com', '2018-04-26 17:00:00', 'Rhamadina Fitrah Umami', 'MUHAMMAD SAJI FAUSIL'),
 ('161080200186', 'ALFIAN ARI P', '05', 'https://ict-umsida.blogspot.com', '2018-04-27 17:00:00', 'Rhamadina Fitrah Umami', 'MUHAMMAD SAJI FAUSIL'),
-('161080200187', 'Muhammad Asy\'ari', '16', 'https://ict-umsida.blogspot.com/', '2018-04-04 17:00:00', 'Rhamadina Fitrah Umami', 'MUHAMMAD SAJI FAUSIL'),
+('161080200187', 'Muhammad Asy''ari', '16', 'https://ict-umsida.blogspot.com/', '2018-04-04 17:00:00', 'Rhamadina Fitrah Umami', 'MUHAMMAD SAJI FAUSIL'),
 ('161080200189', 'ZULFIAN SYAHRIL S', '05', 'https://ict-umsida.blogspot.com', '2018-04-28 17:00:00', 'Rhamadina Fitrah Umami', 'MUHAMMAD SAJI FAUSIL'),
 ('161080200190', 'M. Teguh Prasetyo', '06', 'https://ict-umsida.blogspot.com/', '2018-03-28 17:00:00', 'Fatur Amirul M.', 'MUHAMMAD SAJI FAUSIL'),
 ('161080200192', 'Rochmad Surya N', '16', 'https://ict-umsida.blogspot.com/', '2018-03-30 17:00:00', 'Rhamadina Fitrah Umami', 'MUHAMMAD SAJI FAUSIL'),
@@ -1071,7 +1070,7 @@ INSERT INTO `prak03_basisdata` (`nim_praktikum`, `nama_praktikan`, `kelompok_pra
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prak04_pbo`
+-- Struktur dari tabel `prak04_pbo`
 --
 
 CREATE TABLE `prak04_pbo` (
@@ -1085,29 +1084,29 @@ CREATE TABLE `prak04_pbo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `prak04_pbo`
+-- Dumping data untuk tabel `prak04_pbo`
 --
 
 INSERT INTO `prak04_pbo` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum`, `link_rangkuman`, `tanggal_pengumpulan`, `nama_asisten`, `penerima_laporan`) VALUES
 ('131080200039', 'Teddy Wahyu', '3', 'https://ict-umsida.blogspot.com', '2017-04-11 17:00:00', 'Ailul Chowiyah', 'Nurtia Suryani'),
 ('131080200174', 'M. Sandi Rakhmat. H	', '3', 'https://ict-umsida.blogspot.com', '2017-04-11 17:00:00', 'Ailul Chowiyah', 'Nurtia Suryani'),
-('141080200001', 'Ryzky Ndaru W', '3', 'https://ict-umsida.blogspot.com', '2018-10-18 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Nurtia Suryani'),
+('141080200001', 'Ryzky Ndaru W', '3', 'https://ict-umsida.blogspot.com', '2018-10-18 17:00:00', 'A133 M. Arsyil Adhi''im', 'Nurtia Suryani'),
 ('141080200038', 'Rizky Fajar Ryandi', '6', 'https://ict-umsida.blogspot.com', '2019-11-29 17:00:00', 'A136 Dewangga Eka Putra', 'Nurtia Suryani'),
-('141080200262', 'Mukhammad Fakhruddin', '3', '', '2018-10-19 17:00:00', 'A133 M. Arsyil Adhi\'im', 'A157 Nurtia Suryani'),
+('141080200262', 'Mukhammad Fakhruddin', '3', '', '2018-10-19 17:00:00', 'A133 M. Arsyil Adhi''im', 'A157 Nurtia Suryani'),
 ('151080200009', 'Andi Hariyanto', '11', 'https://ict-umsida.blogspot.com', '2018-10-28 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Nurtia Suryani'),
 ('151080200023', 'Amwalinsanu', '11', 'https://ict-umsida.blogspot.com', '2018-10-28 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Nurtia Suryani'),
-('151080200081', 'M Naufan Romzy', '3', '', '2018-10-18 17:00:00', 'A133 M. Arsyil Adhi\'im', 'A157 Nurtia Suryani'),
+('151080200081', 'M Naufan Romzy', '3', '', '2018-10-18 17:00:00', 'A133 M. Arsyil Adhi''im', 'A157 Nurtia Suryani'),
 ('151080200181', 'Bambang Kiswanto	', '18', 'https://muhamadrosyidin18226-umsida.blogspot.com/', '2019-12-05 17:00:00', 'A144 Aga Dandi P.', 'Nurtia Suryani'),
 ('151080200215', 'Berril Arachman', '8', 'https://ict-umsida.blogspot.com', '2018-10-25 17:00:00', 'A141 Nasrudin Iqrok Mulloh', 'Nurtia Suryani'),
 ('151080200235', 'M. Alfin F.', '8', 'https://ict-umsida.blogspot.com/', '2018-10-24 17:00:00', 'A141 Nasrudin Iqrok Mulloh', 'Rakhmad Fahmi Putra'),
-('151080200257', 'Akhmad Futoroni ', '3', '', '2018-10-19 17:00:00', 'A133 M. Arsyil Adhi\'im', 'A157 Nurtia Suryani'),
-('151080200289', 'Rachmad Bagus M.I', '3', '', '2018-10-19 17:00:00', 'A133 M. Arsyil Adhi\'im', 'A157 Nurtia Suryani'),
-('151080200290', 'Dwiky Anggara p', '3', '', '2018-10-19 17:00:00', 'A133 M. Arsyil Adhi\'im', 'A157 Nurtia Suryani'),
+('151080200257', 'Akhmad Futoroni ', '3', '', '2018-10-19 17:00:00', 'A133 M. Arsyil Adhi''im', 'A157 Nurtia Suryani'),
+('151080200289', 'Rachmad Bagus M.I', '3', '', '2018-10-19 17:00:00', 'A133 M. Arsyil Adhi''im', 'A157 Nurtia Suryani'),
+('151080200290', 'Dwiky Anggara p', '3', '', '2018-10-19 17:00:00', 'A133 M. Arsyil Adhi''im', 'A157 Nurtia Suryani'),
 ('151080200296', 'M. Farid ', '9', 'https://farid15296umsida.home.blog/2019/12/04/m-farid-umsida', '2019-12-03 17:00:00', 'A146 Lailatul Lutfiah', 'Nurtia Suryani'),
 ('151080200298', 'Ifanda Fahrul Ilmi', '9', 'https://ifanda15298umsida.home.blog/2019/12/06/ifanda-fahrul-ilmi-umsida/', '2019-12-08 17:00:00', 'A146 Lailatul Lutfiah', 'Nurtia Suryani'),
 ('151080200302', 'Suko Febrianto', '6', '', '2018-10-18 17:00:00', 'A142 Ramadhani Sugyono', 'A157 Nurtia Suryani'),
 ('151080200312', 'Wanda Rosiawan ', '9', 'https://ict-umsida.blogspot.com', '2019-12-08 17:00:00', 'A146 Lailatul Lutfiah', 'Nurtia Suryani'),
-('151080200313', 'Bintang Prayogo', '3', '', '2018-10-21 17:00:00', 'A133 M. Arsyil Adhi\'im', 'A157 Nurtia Suryani'),
+('151080200313', 'Bintang Prayogo', '3', '', '2018-10-21 17:00:00', 'A133 M. Arsyil Adhi''im', 'A157 Nurtia Suryani'),
 ('161080200089', 'Nurul Hidayah', '13', 'https://ict-umsida.blogspot.com', '2018-10-26 17:00:00', 'A139 Indah Fauzia', 'Nurtia Suryani'),
 ('161080200098', 'Rizky Alfaizar D', '13', 'https://ict-umsida.blogspot.com', '2018-10-29 17:00:00', 'A139 Indah Fauzia', 'Nurtia Suryani'),
 ('161080200107', 'Raifian Akbar M.S', '3', 'https://ict-umsida.blogspot.com', '2017-04-11 17:00:00', 'Ailul Chowiyah', 'Nurtia Suryani'),
@@ -1164,13 +1163,13 @@ INSERT INTO `prak04_pbo` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum
 ('171080200072', 'Novi Nur', '2', 'https://ict-umsida.blogspot.com/', '2018-10-18 17:00:00', 'A132 Haris Ahmad Gozali', 'Rakhmad Fahmi Putra'),
 ('171080200073', 'Fitrianingsih', '11', 'https://ict-umsida.blogspot.com', '2018-10-25 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Nurtia Suryani'),
 ('171080200074', ' Rizky Bayu W', '11', 'https://ict-umsida.blogspot.com', '2018-10-25 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Nurtia Suryani'),
-('171080200075', 'Lucky Johan F', '3', '', '2018-10-18 17:00:00', 'A133 M. Arsyil Adhi\'im', 'A157 Nurtia Suryani'),
-('171080200076', 'Prasadhana A.N', '3', '', '2018-10-18 17:00:00', 'A133 M. Arsyil Adhi\'im', 'A157 Nurtia Suryani'),
-('171080200079', 'Moh.Rizal Ma\'ruf', '12', 'https://ict-umsida.blogspot.com', '2018-10-25 17:00:00', 'A136 Dewangga Eka Putra', 'Nurtia Suryani'),
+('171080200075', 'Lucky Johan F', '3', '', '2018-10-18 17:00:00', 'A133 M. Arsyil Adhi''im', 'A157 Nurtia Suryani'),
+('171080200076', 'Prasadhana A.N', '3', '', '2018-10-18 17:00:00', 'A133 M. Arsyil Adhi''im', 'A157 Nurtia Suryani'),
+('171080200079', 'Moh.Rizal Ma''ruf', '12', 'https://ict-umsida.blogspot.com', '2018-10-25 17:00:00', 'A136 Dewangga Eka Putra', 'Nurtia Suryani'),
 ('171080200080', 'Amril Anash R', '12', 'https://ict-umsida.blogspot.com', '2018-10-24 17:00:00', 'A136 Dewangga Eka Putra', 'Nurtia Suryani'),
-('171080200081', 'Ghiananda H.P', '3', '', '2018-10-18 17:00:00', 'A133 M. Arsyil Adhi\'im', 'A157 Nurtia Suryani'),
-('171080200082', 'Prasetya Dwi N', '3', '', '2018-10-16 17:00:00', 'A133 M. Arsyil Adhi\'im', 'A157 Nurtia Suryani'),
-('171080200083', 'Yudha Hastriawan', '3', '', '2018-10-17 17:00:00', 'A133 M. Arsyil Adhi\'im', 'A157 Nurtia Suryani'),
+('171080200081', 'Ghiananda H.P', '3', '', '2018-10-18 17:00:00', 'A133 M. Arsyil Adhi''im', 'A157 Nurtia Suryani'),
+('171080200082', 'Prasetya Dwi N', '3', '', '2018-10-16 17:00:00', 'A133 M. Arsyil Adhi''im', 'A157 Nurtia Suryani'),
+('171080200083', 'Yudha Hastriawan', '3', '', '2018-10-17 17:00:00', 'A133 M. Arsyil Adhi''im', 'A157 Nurtia Suryani'),
 ('171080200084', 'Moch Anang Fathoni', '12', 'https://ict-umsida.blogspot.com', '2018-10-23 17:00:00', 'A136 Dewangga Eka Putra', 'Nurtia Suryani'),
 ('171080200085', 'Rinal Utama Putra', '12', 'https://ict-umsida.blogspot.com', '2018-10-24 17:00:00', 'A136 Dewangga Eka Putra', 'Nurtia Suryani'),
 ('171080200088', 'Ahmad Rizki Efendi', '4', 'https://ict-umsida.blogspot.com', '2018-10-21 17:00:00', 'A134 Alfian Ari Putra', 'Nurtia Suryani'),
@@ -1241,7 +1240,7 @@ INSERT INTO `prak04_pbo` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum
 ('171080200166', 'M. Nurhayat Mubaraq', '7', 'https://ict-umsida.blogspot.com', '2018-10-22 17:00:00', 'A140 Arofatus Salis', 'Nurtia Suryani'),
 ('171080200167', 'Aditya Johnda P', '13', 'https://ict-umsida.blogspot.com', '2018-10-25 17:00:00', 'A139 Indah Fauzia', 'Nurtia Suryani'),
 ('171080200168', 'Nikko Enggaliano', '7', 'https://ict-umsida.blogspot.com', '2018-10-21 17:00:00', 'A140 Arofatus Salis', 'Nurtia Suryani'),
-('171080200169', 'Rizky Al Ayyubi', '3', '', '2018-10-16 17:00:00', 'A133 M. Arsyil Adhi\'im', 'A157 Nurtia Suryani'),
+('171080200169', 'Rizky Al Ayyubi', '3', '', '2018-10-16 17:00:00', 'A133 M. Arsyil Adhi''im', 'A157 Nurtia Suryani'),
 ('171080200172', 'Hilman Hanifa', '14', 'https://ict-umsida.blogspot.com/', '2018-10-29 17:00:00', 'A138 Dwi Lestari', 'Nurtia Suryani'),
 ('171080200173', 'Muhammad Cholis A.R', '7', 'https://ict-umsida.blogspot.com', '2018-10-22 17:00:00', 'A140 Arofatus Salis', 'Nurtia Suryani'),
 ('171080200174', 'Muhammad Assegaf B', '7', 'https://ict-umsida.blogspot.com', '2018-10-22 17:00:00', 'A140 Arofatus Salis', 'Nurtia Suryani'),
@@ -1305,8 +1304,8 @@ INSERT INTO `prak04_pbo` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum
 ('171080200257', 'M. Bachtiar Z', '13', 'https://ict-umsida.blogspot.com', '2018-10-24 17:00:00', 'A139 Indah Fauzia', 'Nurtia Suryani'),
 ('171080200259', 'Ifaldi Danang S', '6', '', '2019-10-21 17:00:00', 'A142 Ramadhani Sugyono', 'Nurtia Suryani'),
 ('171080200263', 'Habby Nur Cahyo', '8', 'https://ict-umsida.blogspot.com', '2018-10-21 17:00:00', 'A141 Nasrudin Iqrok Mulloh', 'Nurtia Suryani'),
-('171080200269', 'Dimas Fajar N', '3', '', '2018-10-17 17:00:00', 'A133 M. Arsyil Adhi\'im', 'A157 Nurtia Suryani'),
-('171080200273', 'Agung Trisna P', '3', '', '2018-10-18 17:00:00', 'A133 M. Arsyil Adhi\'im', 'A157 Nurtia Suryani'),
+('171080200269', 'Dimas Fajar N', '3', '', '2018-10-17 17:00:00', 'A133 M. Arsyil Adhi''im', 'A157 Nurtia Suryani'),
+('171080200273', 'Agung Trisna P', '3', '', '2018-10-18 17:00:00', 'A133 M. Arsyil Adhi''im', 'A157 Nurtia Suryani'),
 ('171080200277', 'Andri Setiawan', '11', 'https://ict-umsida.blogspot.com', '2018-10-25 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Nurtia Suryani'),
 ('171080200278', 'Tomin', '11', 'https://ict-umsida.blogspot.com', '2018-10-25 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Nurtia Suryani'),
 ('171080200279', 'M. Jamilul Iman ', '11', 'https://ict-umsida.blogspot.com', '2018-10-25 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Nurtia Suryani'),
@@ -1468,7 +1467,7 @@ INSERT INTO `prak04_pbo` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum
 ('181080200181', 'Rizky Septia Putra', '7', 'https://rizky18181-umsida.blogspot.com/2019/12/rangkuman-pratikum-pemrograman.html', '2019-11-28 17:00:00', 'A140 Arofatus Salis', 'Nurtia Suryani'),
 ('181080200182', 'Aulia Veronica', '17', 'https://auliaveronica182b2.blogspot.com/2019/12/rangkuman-modul-praktikum-pbo.html', '2019-12-05 17:00:00', 'A146 Lailatul Lutfiah', 'Nurtia Suryani'),
 ('181080200183', 'Hazmi Ali W', '7', 'https://hazmi18183-umsida.blogspot.com/?m=1', '2019-12-01 17:00:00', 'A140 Arofatus Salis', 'Nurtia Suryani'),
-('181080200184', 'Dimas Sya\'Aldi P', '17', 'https://dimas18184-umsida.blogspot.com/2019/12/rangkuman-praktikum-pbo-181080200184.html', '2019-12-06 17:00:00', 'A146 Lailatul Lutfiah', 'Nurtia Suryani'),
+('181080200184', 'Dimas Sya''Aldi P', '17', 'https://dimas18184-umsida.blogspot.com/2019/12/rangkuman-praktikum-pbo-181080200184.html', '2019-12-06 17:00:00', 'A146 Lailatul Lutfiah', 'Nurtia Suryani'),
 ('181080200186', 'Rifqi Adam ', '7', 'https://rifqiadam186.blogspot.com/2019/12/modul-i-elemen-dasar-java-konsep-dasar.html', '2019-12-02 17:00:00', 'A140 Arofatus Salis', 'Nurtia Suryani'),
 ('181080200188', 'Erika Prastiyanti', '7', 'https://18188-umsida.blogspot.com/?m=1', '2019-11-28 17:00:00', 'A140 Arofatus Salis', 'Nurtia Suryani'),
 ('181080200189', 'Hendrawan P', '18', 'https://hendrawan18189-umsida.blogspot.com', '2019-12-06 17:00:00', 'A144 Aga Dandi P.', 'Nurtia Suryani'),
@@ -1511,7 +1510,7 @@ INSERT INTO `prak04_pbo` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum
 ('181080200247', 'Muhammad Arsyad Dhani', '10', 'https://ict-umsida.blogspot.com', '2019-12-02 17:00:00', 'A143 Achmad Ainun GR', 'Nurtia Suryani'),
 ('181080200249', 'Jihaan Anisa Mukti ', '10', 'https://ict-umsida.blogspot.com', '2019-12-02 17:00:00', 'A143 Achmad Ainun GR', 'Nurtia Suryani'),
 ('181080200250', 'Moch. Sofi Mubarok', '10', 'https://ict-umsida.blogspot.com', '2019-12-04 17:00:00', 'A143 Achmad Ainun GR', 'Nurtia Suryani'),
-('181080200251', 'M. Syauqil\'Ula Ar Rom', '10', 'https://ict-umsida.blogspot.com', '2019-12-02 17:00:00', 'A143 Achmad Ainun GR', 'Nurtia Suryani'),
+('181080200251', 'M. Syauqil''Ula Ar Rom', '10', 'https://ict-umsida.blogspot.com', '2019-12-02 17:00:00', 'A143 Achmad Ainun GR', 'Nurtia Suryani'),
 ('181080200253', 'M. Zaid Al Fayyadh', '19', 'https://ict-umsida.blogspot.com', '2019-12-05 17:00:00', 'A142 Ramadhani Sugyono', 'Nurtia Suryani'),
 ('181080200254', 'M. Fahmi Rizal', '19', 'https://ict-umsida.blogspot.com', '2019-12-05 17:00:00', 'A142 Ramadhani Sugyono', 'Nurtia Suryani'),
 ('181080200255', 'M. Chaijiya Zumma', '19', 'https://ict-umsida.blogspot.com', '2019-12-05 17:00:00', 'A142 Ramadhani Sugyono', 'Nurtia Suryani'),
@@ -1548,7 +1547,7 @@ INSERT INTO `prak04_pbo` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prak05_sistemoperasi`
+-- Struktur dari tabel `prak05_sistemoperasi`
 --
 
 CREATE TABLE `prak05_sistemoperasi` (
@@ -1562,7 +1561,7 @@ CREATE TABLE `prak05_sistemoperasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `prak05_sistemoperasi`
+-- Dumping data untuk tabel `prak05_sistemoperasi`
 --
 
 INSERT INTO `prak05_sistemoperasi` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum`, `link_rangkuman`, `tanggal_pengumpulan`, `nama_asisten`, `penerima_laporan`) VALUES
@@ -1657,23 +1656,23 @@ INSERT INTO `prak05_sistemoperasi` (`nim_praktikum`, `nama_praktikan`, `kelompok
 ('170180200089', 'Alfron Maulana F.', '4', 'https://ict-umsida.blogspot.com', '2018-07-28 17:00:00', 'A132 Haris Ahmad Gozali', 'Muhammad Arginanta Kafi Sambada'),
 ('170180200092', 'Sasmito Bagus S', '4', 'https://ict-umsida.blogspot.com', '2018-07-28 17:00:00', 'A132 Haris Ahmad Gozali', 'Muhammad Arginanta Kafi Sambada'),
 ('170180200101', 'Farrel Ega Santosa', '4', 'https://ict-umsida.blogspot.com', '2019-07-02 17:00:00', 'A132 Haris Ahmad Gozali', 'Muhammad Arginanta Kafi Sambada'),
-('170180200119', 'Riki Fitra Setiawan', '13', 'https://ict-umsida.blogspot.com', '2019-07-07 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
-('170180200132', 'Muhammad Fedy Rifki', '13', 'https://ict-umsida.blogspot.com', '2019-07-04 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
-('170180200136', 'Dwi Radab R', '13', 'https://ict-umsida.blogspot.com', '2019-07-04 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
-('170180200145', 'Muhammad Airun R', '13', 'https://ict-umsida.blogspot.com', '2019-07-04 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
-('170180200194', 'Indahmosulanuramisa', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
-('170180200195', 'Oktavian Eka H.', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
-('170180200196', 'Haris Yoga H', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
-('170180200199', 'Amad', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
-('170180200200', 'Aziz Toopoqor R', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
-('170180200207', 'Muhammad Alwi Aziz', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
-('170180200215', 'Moh Rizal Ihsanuddin', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
-('170180200217', 'Risky Rachmatulilah', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
-('170180200222', 'Ahmad Mufhih', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
-('170180200224', 'Muhammad Fadil Santoso', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
-('170180200247', 'Cholitatur R', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
-('170180200263', 'Habby Nur Cahyo', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
-('170180200276', 'Arga Pradana', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
+('170180200119', 'Riki Fitra Setiawan', '13', 'https://ict-umsida.blogspot.com', '2019-07-07 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
+('170180200132', 'Muhammad Fedy Rifki', '13', 'https://ict-umsida.blogspot.com', '2019-07-04 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
+('170180200136', 'Dwi Radab R', '13', 'https://ict-umsida.blogspot.com', '2019-07-04 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
+('170180200145', 'Muhammad Airun R', '13', 'https://ict-umsida.blogspot.com', '2019-07-04 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
+('170180200194', 'Indahmosulanuramisa', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
+('170180200195', 'Oktavian Eka H.', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
+('170180200196', 'Haris Yoga H', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
+('170180200199', 'Amad', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
+('170180200200', 'Aziz Toopoqor R', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
+('170180200207', 'Muhammad Alwi Aziz', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
+('170180200215', 'Moh Rizal Ihsanuddin', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
+('170180200217', 'Risky Rachmatulilah', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
+('170180200222', 'Ahmad Mufhih', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
+('170180200224', 'Muhammad Fadil Santoso', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
+('170180200247', 'Cholitatur R', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
+('170180200263', 'Habby Nur Cahyo', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
+('170180200276', 'Arga Pradana', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
 ('171080200037', 'Rendy Rizaldy', '10', 'https://ict-umsida.blogspot.com', '2018-11-04 17:00:00', 'M. Amirulloh', 'Muhammad Arginanta Kafi Sambada'),
 ('171080200089', 'Alfron Maulana F.', '4', 'https://ict-umsida.blogspot.com', '2019-07-28 17:00:00', 'A132 Haris Ahmad Gozali', 'Muhammad Arginanta Kafi Sambada'),
 ('17108020009', 'Aisyam Amir N', '4', 'https://ict-umsida.blogspot.com', '2019-07-01 17:00:00', 'A132 Haris Ahmad Gozali', 'Muhammad Arginanta Kafi Sambada'),
@@ -1688,7 +1687,7 @@ INSERT INTO `prak05_sistemoperasi` (`nim_praktikum`, `nama_praktikan`, `kelompok
 ('171080200116', 'Nur Muhammad Ramadhan', '12', 'https://ict-umsida.blogspot.com', '2019-07-04 17:00:00', 'A132 Haris Ahmad Gozali', 'Muhammad Arginanta Kafi Sambada'),
 ('171080200121', 'Wahyu Pratama', '4', 'https://ict-umsida.blogspot.com', '2019-07-01 17:00:00', 'A132 Haris Ahmad Gozali', 'Muhammad Arginanta Kafi Sambada'),
 ('171080200178', 'Lutfi Adi P.', '15', 'https://ict-umsida.blogspot.com', '2018-05-20 17:00:00', 'M. Amirulloh', 'Muhammad Arginanta Kafi Sambada'),
-('171080200212', 'M.Dory Bridantoro', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Muhammad Arginanta Kafi Sambada'),
+('171080200212', 'M.Dory Bridantoro', '8', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A133 M. Arsyil Adhi''im', 'Muhammad Arginanta Kafi Sambada'),
 ('171080200233', 'Rudiyanto', '15', 'https://ict-umsida.blogspot.com', '2018-05-18 17:00:00', 'M. Amirulloh', 'Muhammad Arginanta Kafi Sambada'),
 ('171080200238', 'M.Fauzi Anhar', '15', 'https://ict-umsida.blogspot.com', '2018-05-20 17:00:00', 'M. Amirulloh', 'Muhammad Arginanta Kafi Sambada'),
 ('171080200241', 'Yogy N. Putrajaya', '15', 'https://ict-umsida.blogspot.com', '2018-05-17 17:00:00', 'M. Amirulloh', 'Muhammad Arginanta Kafi Sambada'),
@@ -1704,7 +1703,7 @@ INSERT INTO `prak05_sistemoperasi` (`nim_praktikum`, `nama_praktikan`, `kelompok
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prak06_web`
+-- Struktur dari tabel `prak06_web`
 --
 
 CREATE TABLE `prak06_web` (
@@ -1718,12 +1717,12 @@ CREATE TABLE `prak06_web` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `prak06_web`
+-- Dumping data untuk tabel `prak06_web`
 --
 
 INSERT INTO `prak06_web` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum`, `link_rangkuman`, `tanggal_pengumpulan`, `nama_asisten`, `penerima_laporan`) VALUES
 ('131080200004', 'Khajinin Hadib', '11', '', '2018-11-08 17:00:00', 'Ailul Chowiyah', 'A160 Dewi Eka Safitri'),
-('151080200010', 'Riyan Dwi Pratama', '10', 'https://ict-umsida.blogspot.com/', '2019-12-01 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Dewi Eka Safitri'),
+('151080200010', 'Riyan Dwi Pratama', '10', 'https://ict-umsida.blogspot.com/', '2019-12-01 17:00:00', 'A133 M. Arsyil Adhi''im', 'Dewi Eka Safitri'),
 ('151080200013', 'Naufal Syammas H', '11', '', '2018-11-08 17:00:00', 'Ailul Chowiyah', 'A160 Dewi Eka Safitri'),
 ('151080200014', 'Rachmat Dwi Pranata', '11', '', '2018-11-08 17:00:00', 'Ailul Chowiyah', 'A160 Dewi Eka Safitri'),
 ('151080200022', 'Billy Al Ghazam R.A', '11', '', '2018-11-11 17:00:00', 'Ailul Chowiyah', 'A160 Dewi Eka Safitri'),
@@ -1806,7 +1805,7 @@ INSERT INTO `prak06_web` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum
 ('161080200179', 'Yudhis Siariya P', '14', 'https://ict-umsida.blogspot.com/', '2018-11-11 17:00:00', 'M. Amirulloh', 'Vini Rahmawati'),
 ('161080200180', 'Pratama Budi Bakti', '14', 'https://ict-umsida.blogspot.com/', '2018-11-16 17:00:00', 'M. Amirulloh', 'Vini Rahmawati'),
 ('161080200184', 'Ainun Rachman H', '4', '', '2018-10-30 17:00:00', 'Ailul Chowiyah', 'A160 Dewi Eka Safitri'),
-('161080200187', 'M Asya\'n', '13', 'https://ict-umsida.blogspot.com/', '2018-11-16 17:00:00', 'Rhamadina Fitrah Umami', 'Vini Rahmawati'),
+('161080200187', 'M Asya''n', '13', 'https://ict-umsida.blogspot.com/', '2018-11-16 17:00:00', 'Rhamadina Fitrah Umami', 'Vini Rahmawati'),
 ('161080200190', 'Mochamad Teguh P', '5', 'https://ict-umsida.blogspot.com/', '2018-11-01 17:00:00', 'Rhamadina Fitrah Umami', 'Vini Rahmawati'),
 ('161080200192', 'Rochmad Surya N', '15', 'https://ict-umsida.blogspot.com/', '2018-11-16 17:00:00', 'Rhamadina Fitrah Umami', 'Vini Rahmawati'),
 ('161080200194', 'David Hogy Tri K', '5', 'https://ict-umsida.blogspot.com/', '2018-10-31 17:00:00', 'Rhamadina Fitrah Umami', 'Vini Rahmawati'),
@@ -1849,10 +1848,10 @@ INSERT INTO `prak06_web` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum
 ('161080200319', 'Dwi Agustin', '8', 'https://ict-umsida.blogspot.com/', '2018-11-01 17:00:00', 'M. Amirulloh', 'Vini Rahmawati'),
 ('16108020068', 'M Faris', '2', 'https://ict-umsida.blogspot.com/', '2018-11-01 17:00:00', 'M. Amirulloh', 'Vini Rahmawati'),
 ('171080200', 'Agung Wijaya', '12', 'https://agung17071-umsida.blogspot.com/2019/11/agung071-rangkuman-praktikum.html  ', '2019-11-27 17:00:00', 'A136 Dewangga Eka Putra', 'Dewi Eka Safitri'),
-('171080200003', 'Oky G.', '10', 'https://ict-umsida.blogspot.com/', '2019-11-27 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Dewi Eka Safitri'),
-('171080200008', 'Muhammad Syafri', '10', 'https://ict-umsida.blogspot.com/', '2019-11-27 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Dewi Eka Safitri'),
-('171080200009', 'GAnang Ganindra', '10', 'https://ict-umsida.blogspot.com/', '2019-11-27 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Dewi Eka Safitri'),
-('171080200010', 'Riyan Dwi Pratama', '10', 'https://ict-umsida.blogspot.com/', '2001-12-01 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Dewi Eka Safitri'),
+('171080200003', 'Oky G.', '10', 'https://ict-umsida.blogspot.com/', '2019-11-27 17:00:00', 'A133 M. Arsyil Adhi''im', 'Dewi Eka Safitri'),
+('171080200008', 'Muhammad Syafri', '10', 'https://ict-umsida.blogspot.com/', '2019-11-27 17:00:00', 'A133 M. Arsyil Adhi''im', 'Dewi Eka Safitri'),
+('171080200009', 'GAnang Ganindra', '10', 'https://ict-umsida.blogspot.com/', '2019-11-27 17:00:00', 'A133 M. Arsyil Adhi''im', 'Dewi Eka Safitri'),
+('171080200010', 'Riyan Dwi Pratama', '10', 'https://ict-umsida.blogspot.com/', '2001-12-01 17:00:00', 'A133 M. Arsyil Adhi''im', 'Dewi Eka Safitri'),
 ('171080200052', 'Wahyu Setia Budi', '12', 'https://wahyusetiabintara17052-umsida.blogspot.com/2019/11/wahyu052-rangkuman-praktikum.html', '2019-11-27 17:00:00', 'A136 Dewangga Eka Putra', 'Dewi Eka Safitri'),
 ('171080200107', 'Aditya Johnda P.', '15', 'https://ict-umsida.blogspot.com/', '2019-11-28 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Dewi Eka Safitri'),
 ('171080200136', 'Dwi Rojab R', '15', 'https://ict-umsida.blogspot.com/', '2019-11-28 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Dewi Eka Safitri'),
@@ -1878,23 +1877,23 @@ INSERT INTO `prak06_web` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum
 ('171080200165', 'Wahyu Nur I.', '7', 'https://wahyu17165-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A132 Haris Ahmad Gozali', 'Dewi Eka Safitri'),
 ('171080200166', 'M. Nurhayat Mubaroq', '7', 'https://mubaroq17166-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A132 Haris Ahmad Gozali', 'Dewi Eka Safitri'),
 ('171080200168', 'Nikko Enggaliano', '7', 'https://nikko17168-fstumsida.blogspot.com/2019/11/demi-tugas.html', '2019-11-24 17:00:00', 'A132 Haris Ahmad Gozali', 'Dewi Eka Safitri'),
-('171080200169', 'Ferry Andri Wardhana', '10', 'https://ict-umsida.blogspot.com/', '2019-11-27 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Dewi Eka Safitri'),
+('171080200169', 'Ferry Andri Wardhana', '10', 'https://ict-umsida.blogspot.com/', '2019-11-27 17:00:00', 'A133 M. Arsyil Adhi''im', 'Dewi Eka Safitri'),
 ('171080200172', 'Hilman Hanifa', '16', 'https://hilmanhanifa17172.blogspot.com', '2019-11-28 17:00:00', 'A132 Haris Ahmad Gozali', 'Dewi Eka Safitri'),
 ('171080200173', 'Muh Cholis A.R.', '7', 'https://muhammadrobby17173-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A132 Haris Ahmad Gozali', 'Dewi Eka Safitri'),
 ('171080200174', 'M. Assegaf B .', '7', 'https://assegaf17174-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A132 Haris Ahmad Gozali', 'Dewi Eka Safitri'),
-('171080200180', 'Zudha Surya D.P.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-25 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Dewi Eka Safitri'),
-('171080200181', 'Sukarno Noor I.A.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Dewi Eka Safitri'),
-('171080200183', 'Haditya Wahyu S.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Dewi Eka Safitri'),
-('171080200184', 'Hazmi Ramadhan A.F.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Dewi Eka Safitri'),
-('171080200186', 'Arsha Setya P.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Dewi Eka Safitri'),
-('171080200187', 'Dimas Bagus A.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Rahmi Aulia Barlian'),
-('171080200189', 'M. Muzany Mulyoutomo', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Dewi Eka Safitri'),
+('171080200180', 'Zudha Surya D.P.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-25 17:00:00', 'A133 M. Arsyil Adhi''im', 'Dewi Eka Safitri'),
+('171080200181', 'Sukarno Noor I.A.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi''im', 'Dewi Eka Safitri'),
+('171080200183', 'Haditya Wahyu S.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi''im', 'Dewi Eka Safitri'),
+('171080200184', 'Hazmi Ramadhan A.F.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi''im', 'Dewi Eka Safitri'),
+('171080200186', 'Arsha Setya P.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi''im', 'Dewi Eka Safitri'),
+('171080200187', 'Dimas Bagus A.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi''im', 'Rahmi Aulia Barlian'),
+('171080200189', 'M. Muzany Mulyoutomo', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi''im', 'Dewi Eka Safitri'),
 ('171080200190', 'M. Iqbal Alfani', '16', 'https://iqbalalfani-17190-umsida.blogspot.com', '2019-11-28 17:00:00', 'A132 Haris Ahmad Gozali', 'Dewi Eka Safitri'),
-('171080200192', 'Anisa Yuli E.P.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Dewi Eka Safitri'),
-('171080200193', 'M. Tantowi Yahya', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Dewi Eka Safitri'),
-('171080200194', 'Indah Mas\'ula', '8', 'https://ict-umsida.blogspot.com/', '2019-11-25 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Dewi Eka Safitri'),
-('171080200195', 'Oktavian Eka H.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Dewi Eka Safitri'),
-('171080200196', 'Haris Yoga H.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Dewi Eka Safitri'),
+('171080200192', 'Anisa Yuli E.P.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi''im', 'Dewi Eka Safitri'),
+('171080200193', 'M. Tantowi Yahya', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi''im', 'Dewi Eka Safitri'),
+('171080200194', 'Indah Mas''ula', '8', 'https://ict-umsida.blogspot.com/', '2019-11-25 17:00:00', 'A133 M. Arsyil Adhi''im', 'Dewi Eka Safitri'),
+('171080200195', 'Oktavian Eka H.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi''im', 'Dewi Eka Safitri'),
+('171080200196', 'Haris Yoga H.', '8', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A133 M. Arsyil Adhi''im', 'Dewi Eka Safitri'),
 ('171080200202', 'Aditya Maulana', '16', 'https://aditya17202-umsida.blogspot.com/?m=1', '2019-11-29 17:00:00', 'A132 Haris Ahmad Gozali', 'Dewi Eka Safitri'),
 ('171080200205', 'Muhjudin Insan K.', '6', 'https://ict-umsida.blogspot.com/', '2019-11-24 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Dewi Eka Safitri'),
 ('171080200208', 'Achmad Farras T.', '16', 'https://Achmadfarras17208-umsida.blogspot.com', '2019-11-28 17:00:00', 'A132 Haris Ahmad Gozali', 'Dewi Eka Safitri'),
@@ -1909,7 +1908,7 @@ INSERT INTO `prak06_web` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prak07_jarkom`
+-- Struktur dari tabel `prak07_jarkom`
 --
 
 CREATE TABLE `prak07_jarkom` (
@@ -1923,7 +1922,7 @@ CREATE TABLE `prak07_jarkom` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `prak07_jarkom`
+-- Dumping data untuk tabel `prak07_jarkom`
 --
 
 INSERT INTO `prak07_jarkom` (`nim_praktikum`, `nama_praktikan`, `link_rangkuman`, `kelompok_praktikum`, `tanggal_pengumpulan`, `nama_asisten`, `penerima_laporan`) VALUES
@@ -1997,7 +1996,7 @@ INSERT INTO `prak07_jarkom` (`nim_praktikum`, `nama_praktikan`, `link_rangkuman`
 ('161080200085', 'Damar Huri', 'https://ict-umsida.blogspot.com/', '13', '2018-05-29 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Diana Cindy Agustin '),
 ('161080200086', 'Muhammad Dzikri R', 'https://ict-umsida.blogspot.com/', '2', '2018-05-14 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Diana Cindy Agustin '),
 ('161080200090', 'Muhammad Vikri B.R', 'https://ict-umsida.blogspot.com/', '3', '2018-05-25 17:00:00', 'A141 Nasrudin Iqrok Mulloh', 'Diana Cindy Agustin '),
-('161080200093', 'Muhammad Arif Fa\'i', 'https://ict-umsida.blogspot.com/', '3', '2018-05-14 17:00:00', 'A141 Nasrudin Iqrok Mulloh', 'Diana Cindy Agustin '),
+('161080200093', 'Muhammad Arif Fa''i', 'https://ict-umsida.blogspot.com/', '3', '2018-05-14 17:00:00', 'A141 Nasrudin Iqrok Mulloh', 'Diana Cindy Agustin '),
 ('161080200094', 'Iryan Ali Robbahi', 'https://ict-umsida.blogspot.com/', '13', '2018-05-27 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Diana Cindy Agustin '),
 ('161080200095', 'Dio Kiki Candra', 'https://ict-umsida.blogspot.com/', '13', '2018-05-27 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Diana Cindy Agustin '),
 ('161080200097', 'Rico Bayu W', 'https://ict-umsida.blogspot.com/', '3', '2018-05-20 17:00:00', 'A141 Nasrudin Iqrok Mulloh', 'Diana Cindy Agustin '),
@@ -2040,8 +2039,8 @@ INSERT INTO `prak07_jarkom` (`nim_praktikum`, `nama_praktikan`, `link_rangkuman`
 ('161080200147', 'M. Ari Parmono A', 'https://ict-umsida.blogspot.com/', '14', '2018-06-04 17:00:00', 'A136 Dewangga Eka Putra', 'Diana Cindy Agustin '),
 ('161080200149', 'A. Feggy Octavian', 'https://ict-umsida.blogspot.com/', '14', '2018-06-04 17:00:00', 'A136 Dewangga Eka Putra', 'Diana Cindy Agustin '),
 ('161080200150', 'Efendi', 'https://ict-umsida.blogspot.com/', '14', '2018-06-04 17:00:00', 'A136 Dewangga Eka Putra', 'Diana Cindy Agustin '),
-('161080200153', 'Rexa Putra A', 'https://ict-umsida.blogspot.com/', '15', '2018-06-01 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Diana Cindy Agustin '),
-('161080200154', 'Prastowo Teguh W', 'https://ict-umsida.blogspot.com/', '15', '2018-06-01 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Diana Cindy Agustin '),
+('161080200153', 'Rexa Putra A', 'https://ict-umsida.blogspot.com/', '15', '2018-06-01 17:00:00', 'A133 M. Arsyil Adhi''im', 'Diana Cindy Agustin '),
+('161080200154', 'Prastowo Teguh W', 'https://ict-umsida.blogspot.com/', '15', '2018-06-01 17:00:00', 'A133 M. Arsyil Adhi''im', 'Diana Cindy Agustin '),
 ('161080200156', 'Amilia Krisna D', 'https://ict-umsida.blogspot.com/', '5', '2018-05-17 17:00:00', 'M. Amirulloh', 'Diana Cindy Agustin '),
 ('161080200159', 'Arif Nanda Wilandi', 'https://ict-umsida.blogspot.com/', '5', '2018-05-20 17:00:00', 'M. Amirulloh', 'Diana Cindy Agustin '),
 ('161080200160', 'Fairuzatul Mumtazah', 'https://ict-umsida.blogspot.com/', '16', '2018-06-25 17:00:00', 'A134 Alfian Ari Putra', 'Diana Cindy Agustin '),
@@ -2077,7 +2076,7 @@ INSERT INTO `prak07_jarkom` (`nim_praktikum`, `nama_praktikan`, `link_rangkuman`
 ('161080200211', 'M. Syahrizal Rachman', 'https://ict-umsida.blogspot.com/', '6', '2018-05-21 17:00:00', 'Fatur Amirul M.', 'Diana Cindy Agustin '),
 ('161080200213', 'M. Badrus Sholeh', 'https://ict-umsida.blogspot.com/', '17', '2018-07-02 17:00:00', 'A134 Alfian Ari Putra', 'Diana Cindy Agustin '),
 ('161080200214', 'M. Sahrul Muaffah', 'https://ict-umsida.blogspot.com/', '17', '2018-07-03 17:00:00', 'A134 Alfian Ari Putra', 'Diana Cindy Agustin '),
-('161080200215', 'M. Rosi Hamola', 'https://ict-umsida.blogspot.com/', '15', '2018-06-01 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Diana Cindy Agustin '),
+('161080200215', 'M. Rosi Hamola', 'https://ict-umsida.blogspot.com/', '15', '2018-06-01 17:00:00', 'A133 M. Arsyil Adhi''im', 'Diana Cindy Agustin '),
 ('161080200216', 'Syafrie Herdianto', 'https://ict-umsida.blogspot.com/', '6', '2018-05-23 17:00:00', 'Fatur Amirul M.', 'Diana Cindy Agustin '),
 ('161080200217', 'Ravica Eka C', 'https://ict-umsida.blogspot.com/', '17', '2018-07-04 17:00:00', 'A134 Alfian Ari Putra', 'Diana Cindy Agustin '),
 ('161080200218', 'Mochamad Ramadhan', 'https://ict-umsida.blogspot.com/', '17', '2018-06-01 17:00:00', 'Fatur Amirul M.', 'Diana Cindy Agustin '),
@@ -2120,7 +2119,7 @@ INSERT INTO `prak07_jarkom` (`nim_praktikum`, `nama_praktikan`, `link_rangkuman`
 ('161080200277', 'Reno Pranata Putra', 'https://ict-umsida.blogspot.com/', '5', '2018-05-22 17:00:00', 'M. Amirulloh', 'Diana Cindy Agustin '),
 ('161080200278', 'Ways Alqurni Trio Putra', 'https://ict-umsida.blogspot.com/', '8', '2018-05-21 17:00:00', 'Fatur Amirul M.', 'Diana Cindy Agustin '),
 ('161080200280', 'Faisyal R.A', 'https://ict-umsida.blogspot.com/', '18', '2018-07-03 17:00:00', 'M. Amirulloh', 'Diana Cindy Agustin '),
-('161080200281', 'M. Rizal Amrullah', 'https://ict-umsida.blogspot.com/', '15', '2018-06-01 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Diana Cindy Agustin '),
+('161080200281', 'M. Rizal Amrullah', 'https://ict-umsida.blogspot.com/', '15', '2018-06-01 17:00:00', 'A133 M. Arsyil Adhi''im', 'Diana Cindy Agustin '),
 ('161080200282', 'M. Eko Setiawan', 'https://ict-umsida.blogspot.com/', '8', '2018-05-21 17:00:00', 'Fatur Amirul M.', 'Diana Cindy Agustin '),
 ('161080200284', 'Ainuna Qurrata', 'https://ict-umsida.blogspot.com/', '12', '2018-06-03 17:00:00', 'M. Amirulloh', 'Diana Cindy Agustin '),
 ('161080200287', 'Dendy Firmansyah', 'https://ict-umsida.blogspot.com/', '18', '2018-07-06 17:00:00', 'M. Amirulloh', 'Diana Cindy Agustin '),
@@ -2173,7 +2172,7 @@ INSERT INTO `prak07_jarkom` (`nim_praktikum`, `nama_praktikan`, `link_rangkuman`
 ('171080200068', 'Irga Renanda', 'https://ict-umsida.blogspot.com/', '2', '2019-05-27 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Diana Cindy Agustin '),
 ('171080200070', 'Muhammad Yahya B', 'https://ict-umsida.blogspot.com/', '2', '2019-05-24 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Diana Cindy Agustin '),
 ('171080200077', 'Hanifah Dwindasari', 'https://ict-umsida.blogspot.com/', '16', '2018-06-25 17:00:00', 'A134 Alfian Ari Putra', 'Diana Cindy Agustin '),
-('171080200079', 'Mohammad Rizal Ma\'ruf', 'https://ict-umsida.blogspot.com/', '12', '2019-06-19 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Diana Cindy Agustin '),
+('171080200079', 'Mohammad Rizal Ma''ruf', 'https://ict-umsida.blogspot.com/', '12', '2019-06-19 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Diana Cindy Agustin '),
 ('171080200080', 'Amril Anash Ruddi N', 'https://ict-umsida.blogspot.com/', '12', '2019-06-19 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Diana Cindy Agustin '),
 ('171080200082', 'Prasetya Dwi N', 'https://ict-umsida.blogspot.com/', '2', '2019-05-24 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Diana Cindy Agustin '),
 ('171080200083', 'Yudya Hastrinawan S', 'https://ict-umsida.blogspot.com/', '2', '2019-05-24 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Diana Cindy Agustin '),
@@ -2210,7 +2209,7 @@ INSERT INTO `prak07_jarkom` (`nim_praktikum`, `nama_praktikan`, `link_rangkuman`
 ('171080200168', 'Nikko Enggaliano', 'https://ict-umsida.blogspot.com/', '7', '2019-06-20 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Diana Cindy Agustin '),
 ('171080200169', 'Rizky Al Ayyubi', 'https://ict-umsida.blogspot.com/', '2', '2019-05-24 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Diana Cindy Agustin '),
 ('171080200173', 'M. Cholis Abdu R', 'https://ict-umsida.blogspot.com/', '7', '2019-06-20 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Diana Cindy Agustin '),
-('171080200174', 'M. Assegaf Ba\'alwi', 'https://ict-umsida.blogspot.com/', '7', '2019-06-20 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Diana Cindy Agustin '),
+('171080200174', 'M. Assegaf Ba''alwi', 'https://ict-umsida.blogspot.com/', '7', '2019-06-20 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Diana Cindy Agustin '),
 ('171080200178', 'Lutfi Adi Putra', 'https://ict-umsida.blogspot.com/', '16', '2018-06-25 17:00:00', 'A134 Alfian Ari Putra', 'Diana Cindy Agustin '),
 ('171080200181', 'Sukarno Noor Ismail A', 'https://ict-umsida.blogspot.com/', '7', '2019-06-20 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Diana Cindy Agustin '),
 ('171080200183', 'Haditya Wahyu Setiawan', 'https://ict-umsida.blogspot.com/', '7', '2019-06-23 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Diana Cindy Agustin '),
@@ -2231,7 +2230,7 @@ INSERT INTO `prak07_jarkom` (`nim_praktikum`, `nama_praktikan`, `link_rangkuman`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prak08_rpl`
+-- Struktur dari tabel `prak08_rpl`
 --
 
 CREATE TABLE `prak08_rpl` (
@@ -2245,7 +2244,7 @@ CREATE TABLE `prak08_rpl` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `prak08_rpl`
+-- Dumping data untuk tabel `prak08_rpl`
 --
 
 INSERT INTO `prak08_rpl` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum`, `link_rangkuman`, `tanggal_pengumpulan`, `nama_asisten`, `penerima_laporan`) VALUES
@@ -2316,7 +2315,7 @@ INSERT INTO `prak08_rpl` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum
 ('161080200085', 'Daman Huri', '12', 'https://ict-umsida.blogspot.com/', '2018-10-18 17:00:00', 'Rhamadina Fitrah Umami', 'Siti Nur Haliza'),
 ('161080200086', 'Muhammad Dzikri R.', '2', '', '2018-05-09 17:00:00', 'Fatur Amirul M.', 'Rahmi Aulia Barlian'),
 ('161080200090', 'M. Vikri Budi R.', '2', '', '2018-05-09 17:00:00', 'Fatur Amirul M.', 'Rahmi Aulia Barlian'),
-('161080200093', 'Muhammad Arifa\'i', '2', '', '2018-05-09 17:00:00', 'Fatur Amirul M.', 'Rahmi Aulia Barlian'),
+('161080200093', 'Muhammad Arifa''i', '2', '', '2018-05-09 17:00:00', 'Fatur Amirul M.', 'Rahmi Aulia Barlian'),
 ('161080200094', 'Irvan Ali Putra', '12', 'https://ict-umsida.blogspot.com/', '2018-10-12 17:00:00', 'M. Amirulloh', 'Alfan Indra Kusuma'),
 ('161080200097', 'Rico Bayu W.', '2', '', '2018-05-09 17:00:00', 'Fatur Amirul M.', 'Rahmi Aulia Barlian'),
 ('161080200098', 'Rizky Alfaizar', '16', 'https://ict-umsida.blogspot.com/', '2019-12-20 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Siti Nur Haliza'),
@@ -2377,7 +2376,7 @@ INSERT INTO `prak08_rpl` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum
 ('161080200180', 'Pratama Budi Bakti', '14', 'https://ict-umsida.blogspot.com/', '2018-10-17 17:00:00', 'Ailul Chowiyah', 'Alfan Indra Kusuma'),
 ('161080200183', 'Padova Bima M.', '2', 'https://ict-umsida.blogspot.com/', '2018-09-09 17:00:00', 'Fatur Amirul M.', 'Alfan Indra Kusuma'),
 ('161080200184', 'Ivan Fajar H', '5', 'https://ict-umsida.blogspot.com/', '2018-08-09 17:00:00', 'Ailul Chowiyah', 'Siti Nur Haliza'),
-('161080200187', 'M. Asy\'Ari', '14', 'https://ict-umsida.blogspot.com/', '2018-10-17 17:00:00', 'Ailul Chowiyah', 'Alfan Indra Kusuma'),
+('161080200187', 'M. Asy''Ari', '14', 'https://ict-umsida.blogspot.com/', '2018-10-17 17:00:00', 'Ailul Chowiyah', 'Alfan Indra Kusuma'),
 ('161080200189', 'Zulfian Syahril S.', '5', 'https://ict-umsida.blogspot.com/', '2018-10-15 17:00:00', 'Ailul Chowiyah', 'Alfan Indra Kusuma'),
 ('161080200190', 'M. Teguh Prasetya', '6', 'https://ict-umsida.blogspot.com/', '2018-10-08 17:00:00', 'M. Amirulloh', 'Alfan Indra Kusuma'),
 ('161080200192', 'Rochmad Surya N.', '15', 'https://ict-umsida.blogspot.com/', '2018-10-19 17:00:00', 'Rhamadina Fitrah Umami', 'Alfan Indra Kusuma'),
@@ -2473,7 +2472,7 @@ INSERT INTO `prak08_rpl` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum
 ('171080200051', 'Ilham Fajar Maulana', '2', 'https://faris17054-umsida.blogspot.com/2019/12/lampiran-1-analisa-dan-desain.html', '2019-12-15 17:00:00', 'A138 Dwi Lestari', 'Alfan Indra Kusuma'),
 ('171080200052', 'Wahyu Setya B.', '12', 'https://ict-umsida.blogspot.com/', '2019-12-18 17:00:00', 'A142 Ramadhani Sugyono', 'Siti Nur Haliza'),
 ('171080200054', 'Moh. Faris Ghossani', '2', 'https://faris17054-umsida.blogspot.com/2019/12/lampiran-1-analisa-dan-desain.html', '2019-12-15 17:00:00', 'A138 Dwi Lestari', 'Alfan Indra Kusuma'),
-('171080200056', 'Rizky Ar Rafii\'', '2', 'https://rizky17056-umsida.blogspot.com/2019/12/rangkuman-praktikum-rekayasa-perangkat.html', '2019-12-15 17:00:00', 'A138 Dwi Lestari', 'Alfan Indra Kusuma'),
+('171080200056', 'Rizky Ar Rafii''', '2', 'https://rizky17056-umsida.blogspot.com/2019/12/rangkuman-praktikum-rekayasa-perangkat.html', '2019-12-15 17:00:00', 'A138 Dwi Lestari', 'Alfan Indra Kusuma'),
 ('171080200057', 'Miftahush Sholihah', '12', 'https://ict-umsida.blogspot.com/', '2019-12-18 17:00:00', 'A142 Ramadhani Sugyono', 'Siti Nur Haliza'),
 ('171080200058', 'Eddy Mulyono', '12', 'https://ict-umsida.blogspot.com/', '2019-12-19 17:00:00', 'A142 Ramadhani Sugyono', 'Siti Nur Haliza'),
 ('171080200059', 'Eranio Mukti Lazuardi', '2', 'https://eranioml17059-umsida.blogspot.com/2019/12/rangkuman-praktikum-rpl-201.html', '2019-12-19 17:00:00', 'A138 Dwi Lestari', 'Alfan Indra Kusuma'),
@@ -2505,7 +2504,7 @@ INSERT INTO `prak08_rpl` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum
 ('171080200102', 'M. Bagas Satriyo Utomo', '4', 'https://ict-umsida.blogspot.com/', '2019-12-15 17:00:00', 'A140 Arofatus Salis', 'Siti Nur Haliza'),
 ('171080200103', 'Danu Wahyudi', '14', 'https://danuwahyudi17103-umsida.blogspot.com/2019/12/rangkuman-praktikum-rpl.html', '2019-12-20 17:00:00', 'A139 Indah Fauzia', 'Alfan Indra Kusuma'),
 ('171080200104', 'Andri Setiawan', '14', 'https://andrisetiawan-17104-umsida.blogspot.com/', '2019-12-19 17:00:00', 'A139 Indah Fauzia', 'Alfan Indra Kusuma'),
-('171080200106', 'Moch. Musadat Ansa\'', '14', 'https://mochmusaddatansa171106-umsida-2019-14.blogspot.com/2019/12/laporanpraktikum-rekayasaperangkat.html', '2019-12-19 17:00:00', 'A139 Indah Fauzia', 'Alfan Indra Kusuma'),
+('171080200106', 'Moch. Musadat Ansa''', '14', 'https://mochmusaddatansa171106-umsida-2019-14.blogspot.com/2019/12/laporanpraktikum-rekayasaperangkat.html', '2019-12-19 17:00:00', 'A139 Indah Fauzia', 'Alfan Indra Kusuma'),
 ('171080200107', 'Silvando Rengga Arnanta', '4', 'https://ict-umsida.blogspot.com/', '2019-12-15 17:00:00', 'A140 Arofatus Salis', 'Siti Nur Haliza'),
 ('171080200109', 'Hisyam Amir N.', '14', 'https://hisyamamirn109-umsida.blogspot.com/', '2019-12-22 17:00:00', 'A139 Indah Fauzia', 'Alfan Indra Kusuma'),
 ('171080200111', 'Lola Herawati', '4', 'https://ict-umsida.blogspot.com/', '2019-12-13 17:00:00', 'A140 Arofatus Salis', 'Siti Nur Haliza'),
@@ -2553,20 +2552,20 @@ INSERT INTO `prak08_rpl` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum
 ('171080200172', 'Hilman Hanifah', '17', 'https://hilmanhanifa17172.blogspot.com/2019/12/rangkuman-praktikum-rpl.html', '2019-12-20 17:00:00', 'A136 Dewangga Eka Putra', 'Rahmi Aulia Barlian'),
 ('171080200173', 'M. Cholis Abdu R.', '7', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Siti Nur Haliza'),
 ('171080200174', 'M. Assegar B.', '7', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A135 Herlian Aliyasa Almaj Duddin', 'Siti Nur Haliza'),
-('171080200180', 'Zudha Surya Dilagaputra', '8', 'https://ict-umsida.blogspot.com/', '2019-12-17 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Siti Nur Haliza'),
-('171080200181', 'Sukarno Noor Ismail A.', '8', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Siti Nur Haliza'),
-('171080200183', 'Haditya Wahyu Setiawan', '8', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Siti Nur Haliza'),
-('171080200184', 'Hazmi Ramadhan Al Fahri', '8', 'https://ict-umsida.blogspot.com/', '2019-12-18 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Siti Nur Haliza'),
-('171080200186', 'Arsha Setya Pradisa', '8', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Siti Nur Haliza'),
-('171080200187', 'Dimas Bagus Aringga', '8', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Siti Nur Haliza'),
+('171080200180', 'Zudha Surya Dilagaputra', '8', 'https://ict-umsida.blogspot.com/', '2019-12-17 17:00:00', 'A133 M. Arsyil Adhi''im', 'Siti Nur Haliza'),
+('171080200181', 'Sukarno Noor Ismail A.', '8', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A133 M. Arsyil Adhi''im', 'Siti Nur Haliza'),
+('171080200183', 'Haditya Wahyu Setiawan', '8', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A133 M. Arsyil Adhi''im', 'Siti Nur Haliza'),
+('171080200184', 'Hazmi Ramadhan Al Fahri', '8', 'https://ict-umsida.blogspot.com/', '2019-12-18 17:00:00', 'A133 M. Arsyil Adhi''im', 'Siti Nur Haliza'),
+('171080200186', 'Arsha Setya Pradisa', '8', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A133 M. Arsyil Adhi''im', 'Siti Nur Haliza'),
+('171080200187', 'Dimas Bagus Aringga', '8', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A133 M. Arsyil Adhi''im', 'Siti Nur Haliza'),
 ('171080200188', 'A. Khoirur M.', '6', 'https://ict-umsida.blogspot.com/', '2019-12-15 17:00:00', 'A132 Haris Ahmad Gozali', 'Alfan Indra Kusuma'),
-('171080200189', 'M. Muzany Mulyoutomo', '8', 'https://ict-umsida.blogspot.com/', '2019-12-18 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Siti Nur Haliza'),
+('171080200189', 'M. Muzany Mulyoutomo', '8', 'https://ict-umsida.blogspot.com/', '2019-12-18 17:00:00', 'A133 M. Arsyil Adhi''im', 'Siti Nur Haliza'),
 ('171080200190', 'Muhammad Iqbal Alfani', '17', 'https://iqbalalfani-17190-umsida.blogspot.com/2019/12/rangkuman-praktikum-rekayasa-perangkat_21.html', '2019-12-19 17:00:00', 'A136 Dewangga Eka Putra', 'Rahmi Aulia Barlian'),
-('171080200192', 'Anisa Yuli Eka P.', '8', 'https://ict-umsida.blogspot.com/', '2019-12-17 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Siti Nur Haliza'),
-('171080200193', 'Muhammad Tantawi Yahya ', '8', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Siti Nur Haliza'),
-('171080200194', 'Indah Masula', '8', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Siti Nur Haliza'),
-('171080200195', 'Oktavian Eka Hernada', '8', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Siti Nur Haliza'),
-('171080200196', 'Haris Yoga H.', '8', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A133 M. Arsyil Adhi\'im', 'Siti Nur Haliza'),
+('171080200192', 'Anisa Yuli Eka P.', '8', 'https://ict-umsida.blogspot.com/', '2019-12-17 17:00:00', 'A133 M. Arsyil Adhi''im', 'Siti Nur Haliza'),
+('171080200193', 'Muhammad Tantawi Yahya ', '8', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A133 M. Arsyil Adhi''im', 'Siti Nur Haliza'),
+('171080200194', 'Indah Masula', '8', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A133 M. Arsyil Adhi''im', 'Siti Nur Haliza'),
+('171080200195', 'Oktavian Eka Hernada', '8', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A133 M. Arsyil Adhi''im', 'Siti Nur Haliza'),
+('171080200196', 'Haris Yoga H.', '8', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A133 M. Arsyil Adhi''im', 'Siti Nur Haliza'),
 ('171080200197', 'Bagus Indra S.D', '17', 'https://bagusisd-17197-umsida.blogspot.com/2019/12/rangkuman-praktikum-rpl.html?m=1', '2019-12-25 17:00:00', 'A136 Dewangga Eka Putra', 'Rahmi Aulia Barlian'),
 ('171080200199', 'Awad', '9', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A134 Alfian Ari Putra', 'Siti Nur Haliza'),
 ('171080200200', 'Aziez T. R.', '9', 'https://ict-umsida.blogspot.com/', '2019-12-16 17:00:00', 'A134 Alfian Ari Putra', 'Siti Nur Haliza'),
@@ -2611,7 +2610,7 @@ INSERT INTO `prak08_rpl` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prak09_sisdig`
+-- Struktur dari tabel `prak09_sisdig`
 --
 
 CREATE TABLE `prak09_sisdig` (
@@ -2625,7 +2624,7 @@ CREATE TABLE `prak09_sisdig` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `prak09_sisdig`
+-- Dumping data untuk tabel `prak09_sisdig`
 --
 
 INSERT INTO `prak09_sisdig` (`nim_praktikum`, `nama_praktikan`, `kelompok_praktikum`, `link_rangkuman`, `tanggal_pengumpulan`, `nama_asisten`, `penerima_laporan`) VALUES
@@ -2792,7 +2791,7 @@ INSERT INTO `prak09_sisdig` (`nim_praktikum`, `nama_praktikan`, `kelompok_prakti
 ('181080200180', 'ENDA NURIYA DEWI', '18', 'https://ict-umsida.blogspot.com', '2019-05-28 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Moch. Wildan Dwiky Rochmansa'),
 ('181080200181', 'RIZKY SEPTIA PUTRA', '8', 'https://ict-umsida.blogspot.com', '2019-06-23 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Moch. Wildan Dwiky Rochmansa'),
 ('181080200182', 'AULIA VERONICA', '8', 'https://ict-umsida.blogspot.com', '2019-06-27 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Moch. Wildan Dwiky Rochmansa'),
-('181080200184', 'DIMAS SYA\'ALDI P', '8', 'https://ict-umsida.blogspot.com', '2019-06-27 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Moch. Wildan Dwiky Rochmansa'),
+('181080200184', 'DIMAS SYA''ALDI P', '8', 'https://ict-umsida.blogspot.com', '2019-06-27 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Moch. Wildan Dwiky Rochmansa'),
 ('181080200186', 'RIFQI ADAM', '8', 'https://ict-umsida.blogspot.com', '2019-06-24 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Moch. Wildan Dwiky Rochmansa'),
 ('181080200188', 'ERIKA PRASTIYANTI', '8', 'https://ict-umsida.blogspot.com', '2019-06-23 17:00:00', 'A131 Mohammad Aditio Putra F.', 'Moch. Wildan Dwiky Rochmansa'),
 ('181080200189', 'HENDRAWAN PUDJIANTO', '19', 'https://ict-umsida.blogspot.com', '2019-06-28 17:00:00', 'A144 Aga Dandi P.', 'Moch. Wildan Dwiky Rochmansa'),
@@ -2908,7 +2907,7 @@ INSERT INTO `prak09_sisdig` (`nim_praktikum`, `nama_praktikan`, `kelompok_prakti
 ('191080200044', 'SANDI EKO E.', '11', 'https://drive.google.com/drive/folders/1yfi2s8wVqyPFrASMKNRIs29uNhwjBwDv', '2019-12-29 17:00:00', 'A151 M. Fitra Gemilang', 'Moch. Wildan Dwiky Rochmansa'),
 ('191080200045', 'M. Habibullah Purnomo', '2', 'http://mhabib19045-umsida.blogspot.com/', '2019-12-22 17:00:00', 'A159 Fahyu Dwi Pratiwi', 'Siti Nur Haliza'),
 ('191080200046', 'MOCHAMAD SUROHADI', '2', 'https://ict-umsida.blogspot.com', '2019-12-19 17:00:00', 'A159 Fahyu Dwi Pratiwi', 'Siti Nur Haliza'),
-('191080200048', 'M. A\'DHOM S', '11', 'https://drive.google.com/drive/folders/1yfi2s8wVqyPFrASMKNRIs29uNhwjBwDv', '2019-12-26 17:00:00', 'A151 M. Fitra Gemilang', 'Moch. Wildan Dwiky Rochmansa'),
+('191080200048', 'M. A''DHOM S', '11', 'https://drive.google.com/drive/folders/1yfi2s8wVqyPFrASMKNRIs29uNhwjBwDv', '2019-12-26 17:00:00', 'A151 M. Fitra Gemilang', 'Moch. Wildan Dwiky Rochmansa'),
 ('191080200050', 'NAILAL KIROOM BI DZIKRILLAH', '2', 'https://dzikri19050-umsida.blogspot.com/2019/12/rangkuman-modul-praktikum-sistem-digital.html', '2019-12-20 17:00:00', 'A159 Fahyu Dwi Pratiwi', 'Siti Nur Haliza'),
 ('191080200052', 'VICCI RAHMAT A. H.', '11', 'https://drive.google.com/drive/folders/1yfi2s8wVqyPFrASMKNRIs29uNhwjBwDv', '2019-12-30 17:00:00', 'A151 M. Fitra Gemilang', 'Moch. Wildan Dwiky Rochmansa'),
 ('191080200054', 'ZAIM ZAHDI', '11', 'https://drive.google.com/drive/folders/1yfi2s8wVqyPFrASMKNRIs29uNhwjBwDv', '2019-12-29 17:00:00', 'A151 M. Fitra Gemilang', 'Moch. Wildan Dwiky Rochmansa'),
@@ -3059,7 +3058,7 @@ INSERT INTO `prak09_sisdig` (`nim_praktikum`, `nama_praktikan`, `kelompok_prakti
 ('191080200208', 'RAZIF ZULFIKAR H', '8', 'https://drive.google.com/drive/folders/1yfi2s8wVqyPFrASMKNRIs29uNhwjBwDv', '2019-12-26 17:00:00', 'A154 Mochammad Bagas', 'Moch. Wildan Dwiky Rochmansa'),
 ('191080200209', 'LUQMANUL HAKIYM', '17', 'https://luqman19209-umsida.blogspot.com', '2019-12-26 17:00:00', 'A146 Lailatul Lutfiah', 'Moch. Wildan Dwiky Rochmansa'),
 ('191080200210', 'ROFINUS ARYANTO', '8', 'https://drive.google.com/drive/folders/1yfi2s8wVqyPFrASMKNRIs29uNhwjBwDv', '2019-12-20 17:00:00', 'A154 Mochammad Bagas', 'Moch. Wildan Dwiky Rochmansa'),
-('191080200211', 'TAUFIKI MA\'RUFAN', '17', 'https://taufikimarufan19211-umsida.blogspot.com/?m=1', '2019-12-29 17:00:00', 'A146 Lailatul Lutfiah', 'Moch. Wildan Dwiky Rochmansa'),
+('191080200211', 'TAUFIKI MA''RUFAN', '17', 'https://taufikimarufan19211-umsida.blogspot.com/?m=1', '2019-12-29 17:00:00', 'A146 Lailatul Lutfiah', 'Moch. Wildan Dwiky Rochmansa'),
 ('191080200212', 'FEBRINA SHANTIN', '17', 'https://febrinas19212-umsida.blogspot.com/2019/12/rangkuman-praktikum-sistem-digital.html', '2019-12-29 17:00:00', 'A146 Lailatul Lutfiah', 'Moch. Wildan Dwiky Rochmansa'),
 ('191080200215', 'ALFITRA OKTAFIAN', '17', 'https://alfi19215-umsida.blogspot.com/2019/12/rangkuman-sistem-digital.html', '2019-12-29 17:00:00', 'A146 Lailatul Lutfiah', 'Moch. Wildan Dwiky Rochmansa'),
 ('191080200216', 'FAJAR HIDAYATULLAH', '8', 'https://drive.google.com/drive/folders/1yfi2s8wVqyPFrASMKNRIs29uNhwjBwDv', '2019-12-26 17:00:00', 'A154 Mochammad Bagas', 'Moch. Wildan Dwiky Rochmansa'),
@@ -3117,7 +3116,7 @@ INSERT INTO `prak09_sisdig` (`nim_praktikum`, `nama_praktikan`, `kelompok_prakti
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rapat`
+-- Struktur dari tabel `rapat`
 --
 
 CREATE TABLE `rapat` (
@@ -3128,7 +3127,7 @@ CREATE TABLE `rapat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rapat`
+-- Dumping data untuk tabel `rapat`
 --
 
 INSERT INTO `rapat` (`id_rapat`, `jenis_rapat`, `tanggal_rapat`, `filename_rapat`) VALUES
@@ -3297,7 +3296,7 @@ ALTER TABLE `bugreport`
 -- AUTO_INCREMENT for table `div_itsupport`
 --
 ALTER TABLE `div_itsupport`
-  MODIFY `id_itsupport` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_itsupport` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `div_itsupport_agenda`
 --
@@ -3337,7 +3336,7 @@ ALTER TABLE `lab_sistemoperasi`
 -- AUTO_INCREMENT for table `lab_softcomputing`
 --
 ALTER TABLE `lab_softcomputing`
-  MODIFY `id_softcomputing` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_softcomputing` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `lpj_kegiatan`
 --
@@ -3347,8 +3346,7 @@ ALTER TABLE `lpj_kegiatan`
 -- AUTO_INCREMENT for table `rapat`
 --
 ALTER TABLE `rapat`
-  MODIFY `id_rapat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;COMMIT;
-
+  MODIFY `id_rapat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
