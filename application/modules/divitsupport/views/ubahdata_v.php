@@ -70,12 +70,12 @@ $this->load->helper('url');
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">REKAYASA PERANGKAT LUNAK</h4>
+                        <h4 class="page-title">IT-SUPPORT</h4>
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">Rekayasa Perangkat Lunak</li>
-                                    <li class="breadcrumb-item">Data Lab Rekayasa Perangkat Lunak</li>
+                                    <li class="breadcrumb-item">IT-Support</li>
+                                    <li class="breadcrumb-item">Data IT-Support</li>
                                     <li class="breadcrumb-item active">Update Data</a></li>
                                     <!-- <li class="breadcrumb-item active" aria-current="page">Praktikum</li> -->
                                 </ol>
@@ -99,80 +99,77 @@ $this->load->helper('url');
                         <div class="card">
                             <div class="card-body">
                                 <center>
-                                    <h3 class="card-title">UPDATE DATA BARANG <strong>REKAYASA PERANGKAT LUNAK</strong></h3>
+                                    <h3 class="card-title">UPDATE DATA BARANG <strong>IT-SUPPORT</strong></h3>
                                 </center>
                                 <div style="color: red;"><?php echo validation_errors(); ?></div>
-                                <?php echo form_open("labrpl/ubah/" . $lab_rpl->id_rpl); ?>
-                                 
+                                <?php echo form_open("divitsupport/ubah/" . $div_itsupport->id_itsupport); ?>
                                 <!-- FORM NAMA BARANG MULAI -->
                                 <div class="form-group">
-                                    <label for="namabarang_rpl">
+                                    <label for="namabarang_itsupport">
                                         Nama Barang
                                         <span class="text-danger">*</span>
                                     </label>
-                                    <input class="form-control" name="id_rpl" type="hidden" value="
-                                                <?php echo set_value('id_rpl', $lab_rpl->id_rpl); ?>">
-                                    <input class="form-control" name="namabarang_rpl" type="text" value="
-                                                <?php echo set_value('namabarang_rpl', $lab_rpl->namabarang_rpl); ?>">
-                                    <?php echo $this->input->post('namabarang_rpl'); ?>
+                                    <input class="form-control" name="namabarang_itsupport" type="text" value="
+                                                <?php echo set_value('namabarang_itsupport', $div_itsupport->namabarang_itsupport); ?>">
+                                    <?php echo $this->input->post('namabarang_itsupport'); ?>
                                     </input>
-                                    <span class="text-danger"><?php echo form_error('namabarang_rpl'); ?></span>
+                                    <span class="text-danger"><?php echo form_error('namabarang_itsupport'); ?></span>
                                 </div>
                                 <!-- FORM NAMA BARANG BUYAR -->
                                 <!-- FORM jumlah barang MULAI -->
                                 <div class="form-group">
-                                    <label for="jumlahbarang_rpl">
+                                    <label for="jumlahbarang_itsupport">
                                         Jumlah Barang
                                         <span class="text-danger">*</span>
                                     </label>
-                                    <input class="form-control" name="jumlahbarang_rpl" type="text" value="
-                                                <?php echo $lab_rpl->jumlahbarang_rpl; ?>">
-                                    <?php echo $this->input->post('jumlahbarang_rpl'); ?>
+                                    <input class="form-control" name="jumlahbarang_itsupport" type="text" value="
+                                                <?php echo set_value($div_itsupport->jumlahbarang_itsupport); ?>">
+                                    <?php echo $this->input->post('jumlahbarang_itsupport'); ?>
                                     </input>
-                                    <span class="text-danger"><?php echo form_error('jumlahbarang_rpl'); ?></span>
+                                    <span class="text-danger"><?php echo form_error('jumlahbarang_itsupport'); ?></span>
                                 </div>
                                 <!-- FORM jumlah barang BUYAR -->
 
                                 <!-- FORM satuan barang MULAI -->
                                 <div class="form-group">
-                                    <label for="satuanbarang_rpl">
+                                    <label for="satuanbarang_itsupport">
                                         Satuan Barang
                                         <span class="text-danger">*</span>
                                     </label>
-                                    <input class="form-control" name="satuanbarang_rpl" type="text" value="
-                                                <?php echo $lab_rpl->satuanbarang_rpl; ?>">
-                                    <?php echo $this->input->post('satuanbarang_rpl'); ?>
+                                    <input class="form-control" name="satuanbarang_itsupport" type="text" value="
+                                                <?php echo set_value($div_itsupport->satuanbarang_itsupport); ?>">
+                                    <?php echo $this->input->post('satuanbarang_itsupport'); ?>
                                     </input>
-                                    <span class="text-danger"><?php echo form_error('satuanbarang_rpl'); ?></span>
+                                    <span class="text-danger"><?php echo form_error('satuanbarang_itsupport'); ?></span>
                                 </div>
                                 <!-- FORM satuan barang BUYAR -->
 
                                 <!-- FORM TANGGAL update-->
                                 <div class="form-group">
-                                    <label for="tanggalupdate_rpl">
+                                    <label for="tanggalupdate_itsupport">
                                         Tanggal Update
                                         <span class="text-danger">*</span>
                                     </label>
-                                    <input class="form-control" name="tanggalupdate_rpl" type="date" value="
-                                                    <?php echo $lab_rpl->tanggalupdate_rpl; ?>">
-                                    <?php echo $this->input->post('tanggalupdate_rpl'); ?>
+                                    <input class="form-control" name="tanggalupdate_itsupport" type="date" value="
+                                                    <?php echo set_value('tanggalupdate_itsupport', $div_itsupport->tanggalupdate_itsupport); ?>">
+                                    <?php echo $this->input->post('tanggalupdate_itsupport'); ?>
                                     </input>
-                                    <span class="text-danger"><?php echo form_error('tanggalupdate_rpl'); ?></span>
+                                    <span class="text-danger"><?php echo form_error('tanggalupdate_itsupport'); ?></span>
                                 </div>
                                 <!-- FORM TANGGAL update BUYAR -->
 
-                                <!-- FORM kondisi barang MULAI -->
+                                <!-- FORM status barang MULAI -->
                                 <div class="form-group">
-                                    <label for="kondisi_rpl">
-                                        Kondisi Barang
+                                    <label for="statusbarang_itsupport">
+                                        Status Barang
                                         <span class="text-danger">*</span>
                                     </label>
-                                    <input class="form-control" name="kondisi_rpl" type="text" value="<?php echo $lab_rpl->kondisi_rpl; ?>">
-                                    <?php echo $this->input->post('kondisi_rpl'); ?>
+                                    <input class="form-control" name="statusbarang_itsupport" type="text">
+                                    <?php echo $this->input->post('statusbarang_itsupport'); ?>
                                     </input>
-                                    <span class="text-danger"><?php echo form_error('kondisi_rpl'); ?></span>
+                                    <span class="text-danger"><?php echo form_error('statusbarang_itsupport'); ?></span>
                                 </div>
-                                <!-- FORM kondisi barang BUYAR -->
+                                <!-- FORM status barang BUYAR -->
 
                                 <div class="border-top">
                                     <div class="card-body">
@@ -182,7 +179,7 @@ $this->load->helper('url');
                                 </div>
 
                                 <?php echo form_close(); ?>
-                                
+                                </form>
                             </div>
                         </div>
                     </div>

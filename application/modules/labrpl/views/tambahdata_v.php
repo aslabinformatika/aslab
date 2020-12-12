@@ -93,9 +93,9 @@ $this->load->helper('url');
                                     <h3 class="card-title">TAMBAH DATA BARANG <strong>REKAYASA PERANGKAT LUNAK</strong></h3>
                                 </center>
                                 <div style="color: red;"><?php echo validation_errors(); ?></div>
-                                <?php echo form_open("rekayasa_perangkat_lunak/tambah_data", array('enctype' => 'multipart/form-data')); ?>
+                                <?php echo form_open("labrpl/tambah_data", array('enctype' => 'multipart/form-data')); ?>
                                 <?php
-                                $this->load->view('dashboard/data-input-jarkom');
+                                $this->load->view('dashboard/data-input-rpl');
                                 ?>
 
                                 <?php echo form_close(); ?>

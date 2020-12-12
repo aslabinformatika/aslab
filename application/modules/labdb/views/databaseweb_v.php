@@ -23,15 +23,6 @@ $this->load->helper('url');
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/matrix/assets/extra-libs/multicheck/multicheck.css') ?>">
     <link href="<?php echo base_url('public/matrix/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css') ?>" rel="stylesheet">
     <link href="<?php echo base_url('public/matrix/dist/css/style.min.css') ?>" rel="stylesheet">
-    <style type="text/css">
-        input {
-            text-align: left;
-        }
-
-        .value {
-            text-align: left;
-        }
-    </style>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -55,8 +46,6 @@ $this->load->helper('url');
     <!-- ============================================================== -->
     <div id="main-wrapper">
         <!-- ============================================================== -->
-        <!-- Topbar header - style you can find in pages.scss -->
-        <!-- ============================================================== -->
         <?php
         $this->load->view('dashboard/header-aside');
         ?>
@@ -70,13 +59,12 @@ $this->load->helper('url');
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">REKAYASA PERANGKAT LUNAK</h4>
+                        <h4 class="page-title">DATABASE DAN WEB</h4>
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">Rekayasa Perangkat Lunak</li>
-                                    <li class="breadcrumb-item">Data Lab Rekayasa Perangkat Lunak</li>
-                                    <li class="breadcrumb-item active">Update Data</a></li>
+                                    <li class="breadcrumb-item">Database dan Web </li>
+                                    <li class="breadcrumb-item active">Data Lab Database dan Web </a></li>
                                     <!-- <li class="breadcrumb-item active" aria-current="page">Praktikum</li> -->
                                 </ol>
                             </nav>
@@ -94,95 +82,88 @@ $this->load->helper('url');
                 <!-- ============================================================== -->
                 <!-- ============================================================== -->
                 <div class="row">
-
-                    <div class="col-6">
+                    <div class="col-12">
                         <div class="card">
                             <div class="card-body">
                                 <center>
-                                    <h3 class="card-title">UPDATE DATA BARANG <strong>REKAYASA PERANGKAT LUNAK</strong></h3>
+                                    <h3 class="card-title">DATA BARANG <strong>DATABASE DAN WEB</strong></h3>
                                 </center>
-                                <div style="color: red;"><?php echo validation_errors(); ?></div>
-                                <?php echo form_open("labrpl/ubah/" . $lab_rpl->id_rpl); ?>
-                                 
-                                <!-- FORM NAMA BARANG MULAI -->
-                                <div class="form-group">
-                                    <label for="namabarang_rpl">
-                                        Nama Barang
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                    <input class="form-control" name="id_rpl" type="hidden" value="
-                                                <?php echo set_value('id_rpl', $lab_rpl->id_rpl); ?>">
-                                    <input class="form-control" name="namabarang_rpl" type="text" value="
-                                                <?php echo set_value('namabarang_rpl', $lab_rpl->namabarang_rpl); ?>">
-                                    <?php echo $this->input->post('namabarang_rpl'); ?>
-                                    </input>
-                                    <span class="text-danger"><?php echo form_error('namabarang_rpl'); ?></span>
-                                </div>
-                                <!-- FORM NAMA BARANG BUYAR -->
-                                <!-- FORM jumlah barang MULAI -->
-                                <div class="form-group">
-                                    <label for="jumlahbarang_rpl">
-                                        Jumlah Barang
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                    <input class="form-control" name="jumlahbarang_rpl" type="text" value="
-                                                <?php echo $lab_rpl->jumlahbarang_rpl; ?>">
-                                    <?php echo $this->input->post('jumlahbarang_rpl'); ?>
-                                    </input>
-                                    <span class="text-danger"><?php echo form_error('jumlahbarang_rpl'); ?></span>
-                                </div>
-                                <!-- FORM jumlah barang BUYAR -->
+                                <a href="<?php echo base_url('labdb/tambah'); ?>"><button type="button" class="btn btn-info btn-sm">Tambah Data Barang</button></a>
+                                <div class="table-responsive">
+                                    <table id="zero_config" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <center>No</center>
+                                                </th>
+                                                <th>
+                                                    <center>Nama Barang</center>
+                                                </th>
+                                                <th>
+                                                    <center>Jumlah Barang</center>
+                                                </th>
+                                                <th>
+                                                    <center>Satuan Barang</center>
+                                                </th>
+                                                <th>
+                                                    <center>Tanggal  </center>
+                                                </th>
+                                                <th>
+                                                    <center>Kondisi Barang</center>
+                                                </th>
 
-                                <!-- FORM satuan barang MULAI -->
-                                <div class="form-group">
-                                    <label for="satuanbarang_rpl">
-                                        Satuan Barang
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                    <input class="form-control" name="satuanbarang_rpl" type="text" value="
-                                                <?php echo $lab_rpl->satuanbarang_rpl; ?>">
-                                    <?php echo $this->input->post('satuanbarang_rpl'); ?>
-                                    </input>
-                                    <span class="text-danger"><?php echo form_error('satuanbarang_rpl'); ?></span>
-                                </div>
-                                <!-- FORM satuan barang BUYAR -->
+                                                <?php if ($this->session->userdata('akses') == '1') : ?>
+                                                    <th colspan="2">
+                                                        <center>Aksi</center>
+                                                    </th>
+                                                <?php endif; ?>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $id = 1;
+                                            foreach ($lab_db as $data) {
+                                            ?>
+                                                <tr>
+                                                
+                                                    <td>
+                                                        <center><?php echo $id++; ?></center>
+                                                    </td>
+                                                    
+                                                    <td>
+                                                        <center><?php echo $data->namabarang_db; ?></center>
+                                                    </td>
+                                                    <td>
+                                                        <center><?php echo $data->jumlahbarang_db; ?></center>
+                                                    </td>
+                                                    <td>
+                                                        <center><?php echo $data->satuanbarang_db; ?></center>
+                                                    </td>
+                                                    <td><center><?php echo $data->tanggalupdate_db; ?></center></td>
+                                                    <td>
+                                                        <center><?php echo $data->kondisi_db; ?></center>
+                                                    </td>
+                                                    
 
-                                <!-- FORM TANGGAL update-->
-                                <div class="form-group">
-                                    <label for="tanggalupdate_rpl">
-                                        Tanggal Update
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                    <input class="form-control" name="tanggalupdate_rpl" type="date" value="
-                                                    <?php echo $lab_rpl->tanggalupdate_rpl; ?>">
-                                    <?php echo $this->input->post('tanggalupdate_rpl'); ?>
-                                    </input>
-                                    <span class="text-danger"><?php echo form_error('tanggalupdate_rpl'); ?></span>
-                                </div>
-                                <!-- FORM TANGGAL update BUYAR -->
+                                                    <?php if ($this->session->userdata('akses') == '1') : ?>
+                                                        <td>
+                                                            <center><a href="<?php echo base_url() . 'labdb/ubah/' . $data->id_db; ?>">Ubah</a></center>
+                                                        </td>
+                                                        <td>
+                                                            <center><a href="<?php echo base_url() . 'labdb/hapus/' . $data->id_db; ?>" onclick="return confirm('Anda yakin mau menghapus item ini ?')" >Hapus</a></center>
 
-                                <!-- FORM kondisi barang MULAI -->
-                                <div class="form-group">
-                                    <label for="kondisi_rpl">
-                                        Kondisi Barang
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                    <input class="form-control" name="kondisi_rpl" type="text" value="<?php echo $lab_rpl->kondisi_rpl; ?>">
-                                    <?php echo $this->input->post('kondisi_rpl'); ?>
-                                    </input>
-                                    <span class="text-danger"><?php echo form_error('kondisi_rpl'); ?></span>
-                                </div>
-                                <!-- FORM kondisi barang BUYAR -->
-
-                                <div class="border-top">
-                                    <div class="card-body">
-                                        <input type="submit" name="submit" value="Ubah" class="btn btn-primary"></input>
-                                        <a href="<?php echo base_url(); ?>"><input type="reset" name="submit" value="Batal" class="btn btn-danger"></input></a>
-                                    </div>
+                                                        </td>
+                                                    <?php endif; ?>
+                                                </tr>
+                                            <?php
+                                            }
+                                            ?>
+                                        </tbody>
+            
+                                       
+                                    </table>
                                 </div>
 
-                                <?php echo form_close(); ?>
-                                
                             </div>
                         </div>
                     </div>

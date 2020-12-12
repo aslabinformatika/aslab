@@ -166,7 +166,7 @@
 
                 <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Divisi</span></a>
                     <ul aria-expanded="false" class="collapse  first-level">
-                        <li class="sidebar-item"><a href="<?php echo base_url('divisi/it_support'); ?>" class="sidebar-link"><i class="mdi mdi-account-multiple-outline"></i><span class="hide-menu"> IT Support </span></a></li>
+                        <li class="sidebar-item"><a href="<?php echo base_url('divitsupport/it_support'); ?>" class="sidebar-link"><i class="mdi mdi-account-multiple-outline"></i><span class="hide-menu"> IT Support </span></a></li>
                         <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-account-multiple-outline"></i><span class="hide-menu"> Jaringan </span></a></li>
                         <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-account-multiple-outline"></i><span class="hide-menu"> Pemrograman </span></a></li>
                         <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-account-multiple-outline"></i><span class="hide-menu"> Humas </span></a></li>
@@ -183,11 +183,11 @@
                             <li class="sidebar-item"><a href="<?php echo base_url('algoprog/algo_prog'); ?>" class="sidebar-link"><i class="mdi mdi-home-modern"></i><span class="hide-menu"> Algo Pemrograman </span></a></li>
                             <li class="sidebar-item"><a href="<?php echo base_url('jarkom/jaringan_komputer'); ?>" class="sidebar-link"><i class="mdi mdi-home-modern"></i><span class="hide-menu"> Jaringan Komputer </span></a></li>
                             <li class="sidebar-item"><a href="<?php echo base_url('labserver/server'); ?>" class="sidebar-link"><i class="mdi mdi-home-modern"></i><span class="hide-menu"> Server </span></a></li>
-                            <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-home-modern"></i><span class="hide-menu"> Rekayasa Perangkat Lunak </span></a></li>
-                            <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-home-modern"></i><span class="hide-menu"> Database & Web </span></a></li>
-                            <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-home-modern"></i><span class="hide-menu"> Sistem Digital </span></a></li>
-                            <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-home-modern"></i><span class="hide-menu"> Algoritma Struktur Data </span></a></li>
-                            <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-home-modern"></i><span class="hide-menu"> PBO </span></a></li>
+                            <li class="sidebar-item"><a href="<?php echo base_url('labrpl/rekayasa_perangkat_lunak'); ?>" class="sidebar-link"><i class="mdi mdi-home-modern"></i><span class="hide-menu"> Rekayasa Perangkat Lunak </span></a></li>
+                            <li class="sidebar-item"><a href="<?php echo base_url('labdb/database_web'); ?>" class="sidebar-link"><i class="mdi mdi-home-modern"></i><span class="hide-menu"> Database & Web </span></a></li>
+                            <li class="sidebar-item"><a href="<?php echo base_url('labsisdig/sistem_digital'); ?>" class="sidebar-link"><i class="mdi mdi-home-modern"></i><span class="hide-menu"> Sistem Digital </span></a></li>
+                            <li class="sidebar-item"><a href="<?php echo base_url('labalgostruk/algoritma_struktur_data'); ?>" class="sidebar-link"><i class="mdi mdi-home-modern"></i><span class="hide-menu"> Algoritma Struktur Data </span></a></li>
+                            <li class="sidebar-item"><a href="<?php echo base_url('labpbo/pemrograman_berorientasi_objek'); ?>" class="sidebar-link"><i class="mdi mdi-home-modern"></i><span class="hide-menu"> PBO </span></a></li>
                         </ul>
                     </li>
                 <?php endif; ?>

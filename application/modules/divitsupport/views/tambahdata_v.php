@@ -46,6 +46,8 @@ $this->load->helper('url');
     <!-- ============================================================== -->
     <div id="main-wrapper">
         <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
         <?php
         $this->load->view('dashboard/header-aside');
         ?>
@@ -63,8 +65,9 @@ $this->load->helper('url');
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"> IT-Support</li>
-                                    <li class="breadcrumb-item active">Data IT-Support</a></li>
+                                    <li class="breadcrumb-item">IT-Support</li>
+                                    <li class="breadcrumb-item">Data IT-Support</li>
+                                    <li class="breadcrumb-item active">Tambah Data</a></li>
                                     <!-- <li class="breadcrumb-item active" aria-current="page">Praktikum</li> -->
                                 </ol>
                             </nav>
@@ -82,105 +85,21 @@ $this->load->helper('url');
                 <!-- ============================================================== -->
                 <!-- ============================================================== -->
                 <div class="row">
+
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
                                 <center>
-                                    <h3 class="card-title">UPDATE DATA BARANG <strong>IT-SUPPORT</strong></h3>
+                                    <h3 class="card-title">TAMBAH DATA BARANG <strong>IT-SUPPORT</strong></h3>
                                 </center>
-                                <a href="<?php echo base_url('divisi/tambah'); ?>"><button type="button" class="btn btn-info btn-sm">Tambah Data Barang</button></a>
-                                <div class="table-responsive">
-                                    <table id="zero_config" class="table table-striped table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th>
-                                                    <center>No</center>
-                                                </th>
-                                                <th>
-                                                    <center>Nama Barang</center>
-                                                </th>
-                                                <th>
-                                                    <center>Jumlah Barang</center>
-                                                </th>
-                                                <th>
-                                                    <center>Satuan Barang</center>
-                                                </th>
-                                                <!-- <th><center>Tanggal Update </center></th> -->
-                                                <th>
-                                                    <center>Status Barang</center>
-                                                </th>
+                                <div style="color: red;"><?php echo validation_errors(); ?></div>
+                                <?php echo form_open("divitsupport/tambah_data", array('enctype' => 'multipart/form-data')); ?>
+                                <?php
+                                $this->load->view('dashboard/data-input-itsupport');
+                                ?>
 
-                                                <?php if ($this->session->userdata('akses') == '1') : ?>
-                                                    <th>
-                                                        <center>Aksi</center>
-                                                    </th>
-                                                <?php endif; ?>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                            $id = 1;
-                                            foreach ($div_itsupport as $data) {
-                                            ?>
-                                                <tr>
-                                                    <td>
-                                                    <center><?php echo $id++; ?></center>
-                                                    </td>
-                                                    <td>
-                                                        <center><?php echo $data->namabarang_itsupport; ?></center>
-                                                    </td>
-                                                    <td>
-                                                        <center><?php echo $data->jumlahbarang_itsupport; ?></center>
-                                                    </td>
-                                                    <td>
-                                                        <center><?php echo $data->satuanbarang_itsupport; ?></center>
-                                                    </td>
-                                                    <!-- <td><center><?php echo $data->tanggalupdate_itsupport; ?></center></td> -->
-                                                    <td>
-                                                        <center><?php echo $data->statusbarang_itsupport; ?></center>
-                                                    </td>
-
-                                                    <?php if ($this->session->userdata('akses') == '1') : ?>
-                                                        <td>
-                                                            <center><a href="<?php echo base_url() . 'divisi/ubah/' . $data->id_itsupport; ?>">Ubah</a></center>
-                                                        </td>
-                                                        <td>
-                                                            <center><a href="<?php echo base_url() . 'divisi/hapus/' . $data->id_itsupport; ?>">Hapus</a></center>
-                                                        </td>
-                                                    <?php endif; ?>
-                                                </tr>
-                                            <?php
-                                            }
-                                            ?>
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>
-                                                    <center>No</center>
-                                                </th>
-                                                <th>
-                                                    <center>Nama Barang</center>
-                                                </th>
-                                                <th>
-                                                    <center>Jumlah Barang</center>
-                                                </th>
-                                                <th>
-                                                    <center>Satuan Barang</center>
-                                                </th>
-                                                <!-- <th><center>Tanggal Update </center></th> -->
-                                                <th>
-                                                    <center>Status Barang</center>
-                                                </th>
-                                                <?php if ($this->session->userdata('akses') == '1') : ?>
-                                                    <th>
-                                                        <center>Aksi</center>
-                                                    </th>
-                                                <?php endif; ?>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div>
-
+                                <?php echo form_close(); ?>
+                                </form>
                             </div>
                         </div>
                     </div>

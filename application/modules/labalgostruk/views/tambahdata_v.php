@@ -61,12 +61,12 @@ $this->load->helper('url');
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">IT-SUPPORT</h4>
+                        <h4 class="page-title">ALGORITMA STRUKTUR DATA</h4>
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">IT-Support</li>
-                                    <li class="breadcrumb-item">Data IT-Support</li>
+                                    <li class="breadcrumb-item">Algoritma Struktur Data </li>
+                                    <li class="breadcrumb-item">Data Lab Algoritma Struktur Data</li>
                                     <li class="breadcrumb-item active">Tambah Data</a></li>
                                     <!-- <li class="breadcrumb-item active" aria-current="page">Praktikum</li> -->
                                 </ol>
@@ -90,12 +90,12 @@ $this->load->helper('url');
                         <div class="card">
                             <div class="card-body">
                                 <center>
-                                    <h3 class="card-title">TAMBAH DATA BARANG <strong>IT-SUPPORT</strong></h3>
+                                    <h3 class="card-title">TAMBAH DATA BARANG <strong>ALGORITMA STRUKTUR DATA</strong></h3>
                                 </center>
                                 <div style="color: red;"><?php echo validation_errors(); ?></div>
-                                <?php echo form_open("divisi/tambah_data", array('enctype' => 'multipart/form-data')); ?>
+                                <?php echo form_open("labalgostruk/tambah_data", array('enctype' => 'multipart/form-data')); ?>
                                 <?php
-                                $this->load->view('dashboard/data-input-itsupport');
+                                $this->load->view('dashboard/data-input-algostruk');
                                 ?>
 
                                 <?php echo form_close(); ?>

@@ -86,7 +86,7 @@ $this->load->helper('url');
                         <div class="card">
                             <div class="card-body">
                                 <center>
-                                    <h3 class="card-title">UPDATE DATA BARANG <strong>ALGORITMA DAN PEMROGRAMAN</strong></h3>
+                                    <h3 class="card-title">DATA BARANG <strong>ALGORITMA DAN PEMROGRAMAN</strong></h3>
                                 </center>
                                 <a href="<?php echo base_url('algoprog/tambah'); ?>"><button type="button" class="btn btn-info btn-sm">Tambah Data Barang</button></a>
                                 <div class="table-responsive">

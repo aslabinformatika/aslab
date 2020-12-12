@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class DivisiModel extends CI_Model
+class ItSupportModels extends CI_Model
 {
   // Fungsi untuk menampilkan semua data
   public function view()

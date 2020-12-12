@@ -64,7 +64,7 @@ $this->load->helper('url');
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item">Rekayasa Perangkat Lunak </li>
-                                    <li class="breadcrumb-item active">Data Lab >Rekayasa Perangkat Lunak </a></li>
+                                    <li class="breadcrumb-item active">Data Lab<a> Rekayasa Perangkat Lunak </a></li>
                                     <!-- <li class="breadcrumb-item active" aria-current="page">Praktikum</li> -->
                                 </ol>
                             </nav>
@@ -86,7 +86,7 @@ $this->load->helper('url');
                         <div class="card">
                             <div class="card-body">
                                 <center>
-                                    <h3 class="card-title">UPDATE DATA BARANG <strong>>REKAYASA PERANGKAT LUNAK</strong></h3>
+                                    <h3 class="card-title">DATA BARANG <strong>REKAYASA PERANGKAT LUNAK</strong></h3>
                                 </center>
                                 <a href="<?php echo base_url('labrpl/tambah'); ?>"><button type="button" class="btn btn-info btn-sm">Tambah Data Barang</button></a>
                                 <div class="table-responsive">
