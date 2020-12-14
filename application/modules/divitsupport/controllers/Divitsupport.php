@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class ItSupport extends CI_Controller {
+class Divitsupport extends CI_Controller {
   
   public function __construct(){
     parent::__construct();
@@ -12,7 +12,7 @@ class ItSupport extends CI_Controller {
   public function it_support(){
     if($this->session->userdata('akses')=='1'){
     $data['div_itsupport'] = $this->ItSupportModels->view();
-    $this->load->view('it_support_v.php', $data);
+    $this->load->view('it_support_v', $data);
     // var_dump($this->session->userdata('akses'));
     }else{
       echo "Anda tidak berhak mengakses halaman ini";
