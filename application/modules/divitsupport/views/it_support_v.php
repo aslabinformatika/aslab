@@ -145,10 +145,10 @@ $this->load->helper('url');
 
                                                     <?php if ($this->session->userdata('akses') == '1') : ?>
                                                         <td>
-                                                            <center><a href="<?php echo base_url() . 'divisi/ubah/' . $data->id_itsupport; ?>">Ubah</a></center>
+                                                            <center><a href="<?php echo base_url() . 'divitsupport/ubah/' . $data->id_itsupport; ?>">Ubah</a></center>
                                                         </td>
                                                         <td>
-                                                            <center><a href="<?php echo base_url() . 'divisi/hapus/' . $data->id_itsupport; ?>">Hapus</a></center>
+                                                            <center><a href="<?php echo base_url() . 'divitsupport/hapus/' . $data->id_itsupport; ?>">Hapus</a></center>
                                                         </td>
                                                     <?php endif; ?>
                                                 </tr>
