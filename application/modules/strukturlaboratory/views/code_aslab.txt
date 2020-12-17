@@ -1,0 +1,14 @@
+// Data Anggota
+
+1 = Wakil, Ketua, Struktural di atasnya.
+2 = Sekretaris
+3 = Bendahara 1 & 2
+4 = Ketua Angkatan
+
+// Divisi
+11 = Jaringan
+12 = IT Support
+13 = Humas
+14 = Training
+15 = Bidang Usaha
+16 = Pemrograman
